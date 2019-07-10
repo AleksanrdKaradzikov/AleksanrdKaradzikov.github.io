@@ -1,2 +1,2 @@
-# AleksanrdKaradzikov.github.io
+# Александр Караджиков
 Мой первый репозиторий
