@@ -1,0 +1,30 @@
+html {
+  font-size: 10px;
+}
+img {
+  max-width: 100%;
+}
+section {
+  padding: 10rem 0 ;
+}
+.header .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .logo .logotype-text {
+  margin-left: 20px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.header .logo .logotype-text span:nth-child(1) {
+  color: #1a1820;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+.header .logo .logotype-text span:nth-child(2) {
+  color: #1a1820;
+  font-weight: 700;
+}

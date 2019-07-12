@@ -1,0 +1,50 @@
+// colors
+@btn-color: #fcb303;
+@icons-color: #46b814;
+@text-color: #1a1820;
+@danger:#ff0000;
+@bg-light:#f5f5f5;
+@light: #fff;
+
+// Basic settings
+html{
+  font-size: 10px;
+}
+img{
+  max-width: 100%;
+}
+// Typograhy
+section{
+  padding:10rem 0 ;
+}
+
+
+
+
+// main
+
+.header{
+  .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .logotype-text{
+      margin-left:20px;
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      span{
+        &:nth-child(1){
+          color:@text-color;
+          text-transform: uppercase;
+          font-weight: 900;
+        }
+        &:nth-child(2){
+          color:@text-color;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
