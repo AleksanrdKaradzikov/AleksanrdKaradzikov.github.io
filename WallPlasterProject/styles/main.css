@@ -4,13 +4,48 @@ html {
 img {
   max-width: 100%;
 }
+.button {
+  background-color: #fcb303;
+  color: #fff;
+  padding: 1rem 3rem;
+  border-radius: 8px;
+  text-transform: uppercase;
+  border: none;
+}
 section {
   padding: 10rem 0 ;
+}
+main {
+  padding-top: 3rem;
+}
+.wrap {
+  display: table;
+  height: 7rem;
+  width: 100%;
+}
+.wrap-block {
+  display: table-cell;
+  vertical-align: middle;
+}
+.header {
+  height: 7rem;
+}
+.header .phone-link {
+  display: inline-block;
+  text-decoration: none;
+  color: #1a1820;
+  font-weight: 900;
+  font-size: 1.5rem;
+  line-height: 7rem;
 }
 .header .logo {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.header .logo img {
+  width: 70px;
+  height: 70px;
 }
 .header .logo .logotype-text {
   margin-left: 20px;
@@ -23,8 +58,9 @@ section {
   color: #1a1820;
   text-transform: uppercase;
   font-weight: 900;
+  margin-bottom: 5px;
 }
 .header .logo .logotype-text span:nth-child(2) {
   color: #1a1820;
-  font-weight: 700;
+  font-weight: normal;
 }

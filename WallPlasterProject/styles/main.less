@@ -13,6 +13,14 @@ html{
 img{
   max-width: 100%;
 }
+.button{
+   background-color: @btn-color;
+   color:@light;
+   padding:1rem 3rem;
+   border-radius:8px;
+   text-transform: uppercase;
+   border:none;
+}
 // Typograhy
 section{
   padding:10rem 0 ;
@@ -22,12 +30,37 @@ section{
 
 
 // main
+main{
+  padding-top:3rem;
+}
+.wrap{
+  display: table;
+  height: 7rem;
+  width:100%;
+  &-block{
+    display: table-cell;
+    vertical-align: middle;
+  }
 
+}
 .header{
+   height: 7rem;;
+  .phone-link{
+    display:inline-block;
+    text-decoration:none;
+    color: @text-color;
+    font-weight: 900;
+    font-size: 1.5rem;
+    line-height: 7rem;
+  }
   .logo{
     display: flex;
     justify-content: center;
     align-items: center;
+    img{
+      width: 70px;
+      height:70px;
+    }
     .logotype-text{
       margin-left:20px;
       display: inline-flex;
@@ -39,10 +72,11 @@ section{
           color:@text-color;
           text-transform: uppercase;
           font-weight: 900;
+          margin-bottom:5px;
         }
         &:nth-child(2){
           color:@text-color;
-          font-weight: 700;
+          font-weight: normal;
         }
       }
     }
