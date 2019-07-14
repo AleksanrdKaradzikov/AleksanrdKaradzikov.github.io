@@ -166,7 +166,7 @@ section{
   }
   }
 }
-
+// wrapp 
 .wrap{
   display: table;
   height: 7rem;
@@ -176,6 +176,7 @@ section{
     vertical-align: middle;
   }
 }
+// классы для блока .header
 .header{
    height: 7rem;;
   .phone-link{
@@ -215,6 +216,7 @@ section{
     }
   }
 }
+
 // slick slider styles
    .features{
      padding:10rem 0;
@@ -278,6 +280,11 @@ section{
    .slick-active{
      outline:none;
    }
+  //  стили для модального окна 
+
+
+
+
 // media
 @media(max-width:767px){
     body{
@@ -285,10 +292,42 @@ section{
     }
     .main{
       background-position: 20% center;
+      .header{
+        .logo{
+          justify-content: center;
+        }
+        .phone-link{
+          display: block;
+          text-align:center;
+          margin: 0 auto;
+       }
+      }
       .main-title{
         text-align:center;
         padding-bottom:3rem;
       }
     }
    
+}
+
+@media(max-width:450px){
+   html, body{
+     overflow-x: hidden;
+   }
+   .main{
+     .header{
+       .logo{
+         justify-content:center;
+       }
+       .phone-link{
+          font-size: 1.5rem;
+          text-align: center;
+          display: block;
+          margin: 0 auto;
+       }
+     }
+     h1.main-title__heading{
+       font-size: 2rem;
+     }
+   }
 }

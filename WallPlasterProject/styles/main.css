@@ -243,8 +243,34 @@ section {
   .main {
     background-position: 20% center;
   }
+  .main .header .logo {
+    justify-content: center;
+  }
+  .main .header .phone-link {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+  }
   .main .main-title {
     text-align: center;
     padding-bottom: 3rem;
+  }
+}
+@media (max-width: 450px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+  .main .header .logo {
+    justify-content: center;
+  }
+  .main .header .phone-link {
+    font-size: 1.5rem;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+  }
+  .main h1.main-title__heading {
+    font-size: 2rem;
   }
 }
