@@ -5,6 +5,12 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <link rel="stylesheet" href="styles/bootstrap.css" type="text/css">
+   <!-- slick skider -->
+   <link rel="stylesheet" href="slick/slick/slick.css">
+   <link rel="stylesheet" href="slick/slick/slick-theme.css">
+   <!-- main.css -->
+   <!-- font awesome -->
+   <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
    <link rel="stylesheet" href="styles/main.css" type="text/css">
    <title>Автоматизированная штукатурка стен</title>
 </head>
@@ -71,9 +77,86 @@
             </div>
         </div>
     </main>
+    <section class="features">
+        <div class="container">
+             <h2 class="features-header">
+                Преимущество работы с нами 
+             </h2>
+             <div class="features-slider">
+                  <div class="features-block">
+                      <div class="features-img">
+                          <img src="images/icon1.png" alt="Первое преимущество">
+                      </div>
+                      <h3>Платите по факту</h3>
+                      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat, dolores doloremque. Modi voluptas error vero alias facere excepturi molestias expedita.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam sint tempore rerum.</p>
+                  </div>
+                  <div class="features-block">
+                      <div class="features-img">
+                          <img src="images/icon2.png" alt="Первое преимущество">
+                      </div>
+                    <h3>Заключаем договор</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat, dolores doloremque. Modi voluptas error vero alias facere excepturi molestias expedita.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam nobis repellat itaque.</p>
+                </div>
+                <div class="features-block">
+                    <div class="features-img">
+                        <img src="images/icon3.png" alt="Первое преимущество">
+                    </div>
+                  <h3>Точно в срок</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error atque blanditiis, ipsa nulla cupiditate fugiat ea laudantium suscipit quo ad ullam deserunt quas excepturi nemo eveniet autem quibusdam modi eos.</p>
+              </div>
+               <div class="features-block">
+                  <div class="features-img">
+                      <img src="images/icon4.png" alt="Первое преимущество">
+                  </div>
+                <h3>Экономите на материалах</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat, dolores doloremque. Modi voluptas error vero alias facere excepturi molestias expedita.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam nobis repellat itaque.</p>
+               </div>
+             </div>
+        </div>
+    </section>
+
  <!--main script-->
 <script src="js/main.js"></script>
  <!--jquery-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- slick.js -->
+<script src="slick/slick/slick.min.js"></script>
+<script>
+    $(document).ready(function(){
+       $('.features-slider').slick({
+          infinite: true,
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          autoplay:false,
+          responsive: [
+            {
+              breakpoint: 991,
+              settings: {
+                prevArrow:'<button type="button" class="prev arrow"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>',
+                nextArrow:'<button type="button" class="next arrow"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>',
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 767,
+              settings: {
+                prevArrow:'<button type="button" class="prev arrow"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>',
+                nextArrow:'<button type="button" class="next arrow"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>',
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+          ]
+       });
+    });
+
+</script>
 </body>
 </html>
+
+<!-- <i class="fa fa-arrow-left" aria-hidden="true"></i> -->
+<!-- <i class="fa fa-arrow-right" aria-hidden="true"></i> -->
