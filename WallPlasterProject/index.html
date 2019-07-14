@@ -38,7 +38,7 @@
                   <div class="col-lg-3 col-lg-offset-0 col-md-4 col-md-offset-0  col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-0 text-center">
                     <div class="wrap">
                       <div class="wrap-block">
-                        <button class="button header-btn">получить консультацию</button>
+                        <button class="button header-btn modal-btn">получить консультацию</button>
                       </div>
                     </div>
                   </div>
@@ -115,6 +115,29 @@
         </div>
     </section>
 
+    <!-- Модальные окна -->
+    <!-- Получить консультацию -->
+    <div class="modal-overflay">
+          <div class="modal">
+               <!-- кнопка закрыть модальное окно -->
+               <button class="modal-close">&times;</button>
+                <div class="modal-content">
+                      <h4 class="modal-header">Заинтересовало?</h4>
+                      <p>Оставте свои контактные данные <br> для связи</p>
+                      <div class="modal-form main-form">
+                          <form action="">
+                              <label for="">Ваше имя</label>
+                              <input class="main-form-input"  type="text" >
+                              <label for="">Ваше номер телефона</label>
+                              <input class="main-form-input" type="text" >
+                              <label for="">Сообщение</label>
+                              <textarea class="main-form-input"  rows="5" ></textarea>
+                              <button class="main-form-btn button" type="submit">оставте заявку</button>
+                            </form>
+                      </div>
+                </div>
+          </div>
+    </div>
  <!--main script-->
 <script src="js/main.js"></script>
  <!--jquery-->
@@ -123,6 +146,16 @@
 <script src="slick/slick/slick.min.js"></script>
 <script>
     $(document).ready(function(){
+        $('.modal-btn').on('click', function(event) {
+           event.preventDefault();
+           $('.modal-overflay').fadeIn(300);
+        });
+        $('.modal-close').on('click', function(event) {
+          event.preventDefault();
+          $('.modal-overflay').fadeOut(300);
+        })
+
+      // slick init
        $('.features-slider').slick({
           infinite: true,
           slidesToShow: 4,
