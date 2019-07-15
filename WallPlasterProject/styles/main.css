@@ -178,6 +178,70 @@ section {
   color: #1a1820;
   font-weight: normal;
 }
+.price {
+  background-color: #348a0f;
+}
+.price-block {
+  margin-top: 3rem;
+  padding: 1rem 3rem 4rem;
+  min-height: 50rem;
+  max-height: 100%;
+  background-color: #fff;
+  box-shadow: 7px 12px 21px 0px rgba(0, 0, 0, 0.17);
+  text-align: center;
+}
+.price-block h4 {
+  margin: 3rem 0;
+  font-size: 1.9rem;
+  font-family: 'ProximaNova_bold', sans-serif;
+}
+.price-block img {
+  display: inline-block;
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 30rem;
+  height: 20rem;
+}
+.price-list {
+  padding: 0;
+  list-style: none;
+  min-height: 14rem;
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+}
+.price-list li::before {
+  content: "✔";
+  display: inline-block;
+  margin-right: 1rem;
+  vertical-align: middle;
+  font-family: 'ProximaNova_bold', sans-serif;
+  font-size: 2rem;
+  color: #46b814;
+}
+.price-tag {
+  display: block;
+  margin-bottom: 2rem;
+  font-size: 1.9rem;
+  font-family: 'ProximaNova_bold', sans-serif;
+}
+.price-button {
+  text-align: right;
+}
+.price-header {
+  text-align: center;
+}
+.price-header-btn {
+  margin-top: 2.5rem;
+}
+.price-header h2 {
+  font-family: 'ProximaNova_bold', sans-serif;
+  font-size: 3.6rem;
+  color: #fff;
+}
+.price-header p {
+  color: #fff;
+  font-size: 1.4rem;
+}
 .features {
   padding: 10rem 0;
 }
@@ -245,7 +309,7 @@ section {
   top: 50%;
   transform: translate(-50%, -50%);
   width: 400px;
-  max-width: 100%;
+  max-width: 85%;
   background-color: #fff;
 }
 .modal-overflay {
@@ -283,7 +347,7 @@ section {
   text-align: center;
   padding: 4rem 6rem;
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   body {
     overflow-x: hidden;
   }
@@ -302,6 +366,22 @@ section {
     text-align: center;
     padding-bottom: 3rem;
   }
+  .price-button {
+    text-align: center;
+    padding: 2rem 0;
+  }
+  .price-header-btn {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+}
+@media (min-width: 991px) and (max-width: 1199px) {
+  .price-block {
+    min-height: 62rem;
+  }
+  .price-button {
+    text-align: center;
+  }
 }
 @media (max-width: 450px) {
   html,
@@ -319,5 +399,8 @@ section {
   }
   .main h1.main-title__heading {
     font-size: 2rem;
+  }
+  .modal-content {
+    padding: 1rem 2rem;
   }
 }

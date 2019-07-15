@@ -114,6 +114,71 @@
              </div>
         </div>
     </section>
+    <!-- section price -->
+    <section class="price">
+      <div class="container">
+        <!-- row -->
+          <div class="row">
+             <div class="col-lg-4 col-lg-offset-4">
+                <div class="price-header">
+                    <h2>Цены</h2>
+                    <p>Выберите варинат, который подходит именно Вам:</p>
+                  </div>
+             </div>
+             <div class="col-lg-4">
+                <div class="price-button">
+                    <button class="button price-header-btn">
+                        Расчитайте полную стоимость
+                    </button>
+                </div>
+             </div>
+          </div>
+          <!-- row -->
+          <div class="row">
+              <div class="col-lg-4 col-lg-offset-0  col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2">
+                <div class="price-block">
+                  <h4>Штукатурка вашим материалом</h4>
+                  <img src="images/price1.jpg" alt="Штукатурка вашим материалом">
+                  <span class="price-tag">от 300 руб/м<sup>2</sup></span>
+                  <ul class="price-list">
+                    <li>Проведение работ</li>
+                    <li>Уборка</li>
+                  </ul>
+                  <button class="button">заказать</button>
+                </div>
+              </div>
+              <div class="col-lg-4 col-lg-offset-0  col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2">
+                <div class="price-block">
+                  <h4>Штукатурка под шпаклёвку</h4>
+                  <img src="images/price2.jpg" alt="Штукатурка под шпаклёвку">
+                  <span class="price-tag">от 500 руб/м<sup>2</sup></span>
+                  <ul class="price-list">
+                      <li>Завоз материала и его объём</li>
+                      <li>Проведение работ</li>
+                      <li>Уборка</li>
+                      <li>Гарантия 2 года</li>
+                    </ul>
+                    <button class="button">заказать</button>
+                </div>
+              </div>
+              <div class="col-lg-4 col-lg-offset-0  col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2">
+                <div class="price-block">
+                  <h4>Штукатурка под обои</h4>
+                  <img src="images/price3.jpg" alt="Штукатурка под обои">
+                  <span class="price-tag">от 560 руб/м<sup>2</sup></span>
+                  <ul class="price-list">
+                      <li>Завоз материала и его объём</li>
+                      <li>Проведение работ</li>
+                      <li>Уборка</li>
+                      <li>Гарантия 2 года</li>
+                      <li>Можно сразу клеить обои</li>
+                    </ul>
+                    <button class="button">заказать</button>
+                </div>
+              </div>
+          </div>
+      </div>
+    </section>
 
     <!-- Модальные окна -->
     <!-- Получить консультацию -->
@@ -145,6 +210,9 @@
 <!-- slick.js -->
 <script src="slick/slick/slick.min.js"></script>
 <script>
+
+   
+
     $(document).ready(function(){
         $('.modal-btn').on('click', function(event) {
            event.preventDefault();
@@ -154,6 +222,8 @@
           event.preventDefault();
           $('.modal-overflay').fadeOut(300);
         })
+
+
 
       // slick init
        $('.features-slider').slick({

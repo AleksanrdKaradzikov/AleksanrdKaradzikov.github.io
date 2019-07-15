@@ -218,7 +218,77 @@ section{
     }
   }
 }
+// pricis
+.price{
+  background-color:darken(@icons-color,10%);
+  // price-block
+  &-block{
+    margin-top:3rem;
+    padding:1rem 3rem 4rem;
+    min-height: 50rem;
+    max-height: 100%;
+    background-color: @light;
+    box-shadow:7px 12px 21px 0px rgba(0, 0, 0, 0.17);
+    text-align:center;
+    
+    h4{
+      margin:3rem 0;
+      font-size: 1.9rem;
+      .bold();
+    }
+    img{
+      display:inline-block;
+      margin-bottom:2rem;
+      width: 100%;
+      max-width:30rem;
+      height: 20rem;
+    }
+  }
+  &-list{
+      padding:0;
+      list-style: none;
+      min-height:14rem;
+      font-size: 1.6rem;
+      line-height:2.5rem;
+      li{
+        &::before{
+          content:"✔";
+          display: inline-block;
+          margin-right:1rem;
+          vertical-align: middle;
+          .bold();
+          font-size: 2rem;
+          color:@icons-color;
+          
+        }
+      }
+  }
+  &-tag{
+      display:block;
+      margin-bottom:2rem;
+      font-size: 1.9rem;
+      .bold();
 
+  }
+  &-button{
+    text-align: right;
+  }
+  &-header{
+    text-align:center;
+    &-btn{
+      margin-top:2.5rem;
+    }
+    h2{
+      .bold();
+      font-size:3.6rem;
+      color:@light;
+    }
+    p{
+      color:@light;
+      font-size:1.4rem;
+    }
+  }
+}
 // slick slider styles
    .features{
      padding:10rem 0;
@@ -289,7 +359,7 @@ section{
     top: 50%;
     transform: translate(-50%,-50%);
     width:400px;
-    max-width: 100%;
+    max-width: 85%;
     background-color: @light;
     &-overflay{
       display: none;
@@ -329,7 +399,7 @@ section{
   }
 
 // media
-@media(max-width:767px){
+@media(max-width:991px){
     body{
       overflow-x: hidden;
     }
@@ -350,8 +420,29 @@ section{
         padding-bottom:3rem;
       }
     }
-   
+    .price{
+      &-button{
+          text-align: center;
+          padding:2rem 0;
+      }
+      &-header-btn{
+        margin-top:1rem;
+        margin-bottom:2rem;
+      }
+    }
 }
+
+@media(min-width:991px) and (max-width:1199px){
+   .price{
+     &-block{
+      min-height: 62rem;
+     }
+    &-button{
+        text-align: center;
+    }
+  }
+}
+
 @media(max-width:450px){
    html, body{
      overflow-x: hidden;
@@ -370,6 +461,11 @@ section{
      }
      h1.main-title__heading{
        font-size: 2rem;
+     }
+   }
+   .modal{
+     &-content{
+       padding: 1rem 2rem;
      }
    }
 }
