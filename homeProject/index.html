@@ -5,10 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>HomeProlect</title>
-  <link rel="stylesheet" href="styles/main.css">
   <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="slick-1.8.1/slick/slick-theme.css">
   <link rel="stylesheet" href="slick-1.8.1/slick/slick.css">
+  <!-- AnimateCSS -->
+  <link rel="stylesheet" href="styles/Animate.css">
+  <!-- Main.css -->
+  <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
      <header id="home" class="parallax" data-image-src="images/homebg.png" data-parallax-speed="0.7">
@@ -54,21 +57,21 @@
        <h1 class="serveses-header">Services</h1>
        <span>We offer ipsum dolor sit amet, consetetur sadipscing elitr amet</span>
         <div class="servises-cards">
-          <div class="card">
+          <div class="wow fadeInUp card">
               <div class="card-bord red">
                   <img alt="iconA" src="images/serveses-iconA.png">
               </div>
             <h1>Clean Typography</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit. Lorem ipsum.</p>
           </div>
-          <div class="card">
+          <div class="wow fadeInUp card">
               <div class="card-bord">
                   <img alt="iconA" src="images/servises-iconHTML.png">
               </div>
             <h1>Rock Solid Code</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit. Lorem ipsum.</p>
           </div>
-          <div class="card">
+          <div class="wow fadeInUp card">
               <div class="card-bord">
                   <img alt="iconA" src="images/serveses-iconO.png">
               </div>
@@ -183,84 +186,84 @@
          <button id="strategy">Strategy</button>
        </div>
        <div class="works-cards cards">
-         <div class="works-card hair branding brand1  card">
+         <div class="wow flipInX works-card hair branding brand1  card">
            <h1 class="works-card__heading">Hair Dresser</h1>
            <p>Branding</p>
            <div class="more" data-content="1">
               <span>View ></span>
            </div>
          </div>
-         <div class="works-card branding card brand2">
+         <div class="wow flipInX works-card branding card brand2">
             <h1 class="works-card__heading">Corporate Identity</h1>
             <p>Branding</p>
             <div class="more" data-content="2">
                <span>View ></span>
             </div>
           </div>
-          <div class="works-card branding card brand3">
+          <div class="wow flipInX works-card branding card brand3">
               <h1 class="works-card__heading">Mock Up</h1>
               <p>Branding</p>
               <div class="more" data-content="3">
                  <span>View ></span>
               </div>
             </div>
-            <div class="works-card design card design1">
+            <div class="wow flipInX works-card design card design1">
               <h1 class="works-card__heading">Lamps</h1>
               <p>Branding</p>
               <div class="more" data-content="4">
                  <span>View ></span>
               </div>
             </div>
-            <div class="works-card design card design2" >
+            <div class="wow flipInX works-card design card design2" >
               <h1 class="works-card__heading">Graphic Design</h1>
               <p>Branding</p>
               <div class="more" data-content="5">
                  <span>View ></span>
               </div>
             </div>
-            <div class="works-card design card design3" >
+            <div class="wow flipInX works-card design card design3" >
               <h1 class="works-card__heading">Zeplin + Sketch</h1>
               <p>Branding</p>
               <div class="more" data-content="6">
                  <span>View ></span>
               </div>
             </div>
-            <div class="works-card development card development1" >
+            <div class="wow flipInX works-card development card development1" >
               <h1 class="works-card__heading">Settings</h1>
               <p>Branding</p>
               <div class="more" data-content="7">
                  <span>View ></span>
               </div>
             </div>
-            <div class="works-card development card development2" >
+            <div class="wow flipInX works-card development card development2" >
               <h1 class="works-card__heading">Brands</h1>
               <p>Branding</p>
               <div class="more" data-content="8">
                  <span>View ></span>
               </div>
             </div>
-            <div class="works-card development card development3" >
+            <div class="wow flipInX works-card development card development3" >
               <h1 class="works-card__heading">Artificial Intelligence</h1>
               <p>Branding</p>
               <div class="more" data-content="9">
                  <span>View ></span>
               </div>
             </div>
-            <div class="works-card strategy card strategy1" >
+            <div class="wow flipInX works-card strategy card strategy1" >
               <h1 class="works-card__heading">Website Goal</h1>
               <p>Branding</p>
               <div class="more" data-content="10">
                  <span>View ></span>
               </div>
             </div>
-            <div class="works-card strategy card strategy2" >
+            <div class="wow flipInX works-card strategy card strategy2" >
               <h1 class="works-card__heading">Strategy</h1>
               <p>Branding</p>
               <div class="more" data-content="11">
                  <span>View ></span>
               </div>
             </div>
-            <div class="works-card strategy card strategy3" >
+            <div class="wow flipInX works-card strategy card strategy3" >
               <h1 class="works-card__heading">Arrows</h1>
               <p>Branding</p>
               <div class="more" data-content="12">
@@ -439,7 +442,13 @@
   <script src="js/modal.js"></script>
   <script src="slick-1.8.1/slick/slick.min.js"></script>
   <!-- slick init -->
+  <!--WOW-->
+  <script src="js/wow.js"></script>
   <script>
+
+    var wow = new WOW();
+    wow.init();
+
 
     paralaxA.init('.parallax');
 
