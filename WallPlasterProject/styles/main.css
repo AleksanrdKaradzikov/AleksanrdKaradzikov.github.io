@@ -361,6 +361,83 @@ section {
 .feedback-slider-btn_next {
   right: -2rem;
 }
+.scheme {
+  background-color: #f5f5f5;
+}
+.scheme-header {
+  text-align: center;
+  margin-bottom: 6rem;
+}
+.scheme-header h2 {
+  font-family: 'ProximaNova_bold', sans-serif;
+  margin-bottom: 3rem;
+}
+.scheme-block {
+  min-height: 30rem;
+}
+.scheme-block h3 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-family: 'ProximaNova_bold', sans-serif;
+}
+.scheme-block img {
+  height: 10rem;
+}
+.all-inclusived-header {
+  text-align: center;
+  margin-bottom: 6rem;
+}
+.all-inclusived-header h2 {
+  margin-bottom: 3rem;
+  font-size: 4rem;
+  font-family: 'ProximaNova_bold', sans-serif;
+  color: #348a0f;
+}
+.all-inclusived-block {
+  height: 7rem;
+  margin-bottom: 5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.all-inclusived-block_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 1rem;
+}
+.all-inclusived-block_text h3 {
+  font-family: 'ProximaNova_bold', sans-serif;
+  font-size: 1.2rem;
+  margin: 0;
+}
+.all-inclusived-block_text p {
+  margin: 0;
+  font-size: 1rem;
+}
+.all-inclusived-block_icons .icons-border {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3rem;
+  width: 5rem;
+  height: 5rem;
+  border: 2px solid #46b814;
+  border-radius: 50%;
+}
+.all-inclusived-block_icons .icons-border span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #348a0f;
+  border-radius: 50%;
+  color: #fff;
+  font-family: 'ProximaNova_bold', sans-serif;
+  font-size: 2rem;
+}
 .features {
   padding: 10rem 0;
 }
@@ -504,6 +581,12 @@ section {
     margin-top: 1rem;
     margin-bottom: 2rem;
   }
+  .scheme {
+    text-align: center;
+  }
+  .scheme-block {
+    height: auto;
+  }
 }
 @media (min-width: 991px) and (max-width: 1199px) {
   .price-block {
@@ -544,5 +627,8 @@ section {
   }
   .feedback-slider-btn_next {
     right: 0rem;
+  }
+  .all-inclusived-block_text h3 {
+    font-size: 1rem;
   }
 }
