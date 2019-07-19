@@ -505,7 +505,101 @@
           </div>
           <img src="images/woman.png" alt="problems-girl" class="problems-girl">
       </section>
-
+      <!-- materials -->
+      <section class="materials">
+           <div class="container">
+            <div class="materials-header">
+              <h2>Материалы</h2>
+              <p>Мы работаем только с качественными, проверенными временем материалами, следующих производителей:</p>
+            </div>
+              <div class="materials-slider">
+                  <div class="materials-block">
+                    <img src="images/materials/material1.png" alt="">
+                    <h2>Volma</h2>
+                    <p>Волма Аква слой <br> Волма Гипс актив</p>
+                    <a class="materials-link" href="#">Сертификат</a>
+                  </div>
+                  <div class="materials-block">
+                    <img src="images/materials/material2.png" alt="">
+                    <h2>Knauf</h2>
+                    <p>МП-75 <br> Unterputz</p>
+                    <a class="materials-link" href="#">Сертификат</a>
+                  </div>
+                  <div class="materials-block">
+                    <img src="images/materials/material3.png" alt="">
+                    <h2>Forman</h2>
+                    <p>Форман 12 <br> Форман 61</p>
+                    <a class="materials-link" href="#">Сертификат</a>
+                  </div>
+                  <div class="materials-block">
+                    <img src="images/materials/material4.png" alt="">
+                    <h2>Ceresit</h2>
+                    <p>Церезит СТ-17 <br> Церезит СТ-19</p>
+                    <a class="materials-link" href="#">Сертификат</a>
+                  </div>
+              </div>
+           </div>
+      </section>
+      <!--tour -->
+      <section class="tour  parallax" data-image-src="images/tours-bg.jpg" data-paralax-speed="0.7">
+            <div class="container">
+              <div class="main-content tour-content">
+                <div class="row">
+                  <div class="col-lg-5 col-lg-offset-0 col-md-5 col-md-offset-0 col-sm-5 col-sm-offset-0 col-xs-12 col-xs-offset-0">
+                        <div class="main-title tour-title">
+                          <h1 class="main-title__heading">ПОСМОТРИТЕ <br>КАК МЫ РАБОТАЕМ</h1>
+                          <p class="main-subtitle tour-subtitle">Хотите удостовериться в профессионализме <br> наших сотрудников?</p>
+                          <p class="main-subtitle tour-subtitle">Вы можете сделать это, приехав на один из наших объектов, и понаблюдав за ходом работ. Увидите оборудование, материалы и качество исполнения.</p>
+                        </div>
+                  </div>
+  
+                  <div class="col-lg-4 col-lg-offset-3 col-md-4 col-md-offset-3 col-sm-5 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+                     <div class="main-form tour-form">
+                       <h1 class="main-form-heading tour-form-heading text-center">Оставьте контактные данные для связи</h1>
+                        <form action="">
+                          <label for="">Ваше имя</label>
+                          <input class="main-form-input"  type="text" >
+                          <label for="">Ваш номер телефона</label>
+                          <input class="main-form-input" type="text" >
+                          <button class="main-form-btn button" type="submit">Записаться на просмотр</button>
+                          <small>Подберем ближайший к Вам объект</small>
+                        </form>
+                     </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+      </section>
+      <!-- uppsell -->
+      <section class="uppsell">
+            <div class="container">
+                <div class="uppsell-header">
+                    <h2>Дополнительные услуги</h2>
+                    <p>Помимо механизированных штукатурных работ Вы можете заказать у нас следующие услуги</p>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                  <div class="uppsell-block">
+                      <img src="images/uppsell/uppsell1.jpg" alt="">
+                      <p>Монтаж электропроводки</p>
+                      <button class="button">Цены</button>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                  <div class="uppsell-block">
+                      <img src="images/uppsell/uppsell2.jpg" alt="">
+                      <p>Стяжка пола</p>
+                      <button class="button">Цены</button>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                  <div class="uppsell-block">
+                      <img src="images/uppsell/uppsell3.jpg" alt="">
+                      <p>Кладка перегородок</p>
+                      <button class="button">Цены</button>
+                  </div>
+                </div>
+            </div>
+      </section>
     <!-- Модальные окна -->
     <!-- Получить консультацию -->
     <div class="modal-overflay">
@@ -539,10 +633,11 @@
 <!-- fotoroma SDN -->
 <link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
-
-
+<!-- MyParallax -->
+<script src="js/MyParallaxLibrarys.js"></script>
 <script>
-
+   
+   paralaxA.init('.parallax');
    
 
     $(document).ready(function(){
@@ -593,7 +688,37 @@
             // instead of a settings object
           ]
        });
+
+      //  materials-slider
+      $('.materials-slider').slick({
+        infinite: true,
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          autoplay:false,
+          responsive:[
+          {
+              breakpoint: 991,
+              settings: {
+                prevArrow:'<button type="button" class="prev materials-arrow materials-arrow-prev"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>',
+                nextArrow:'<button type="button" class="next materials-arrow materials-arrow-next"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>',
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 767,
+              settings: {
+                prevArrow:'<button type="button" class="prev materials-arrow materials-arrow-prev"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>',
+                nextArrow:'<button type="button" class="next materials-arrow materials-arrow-next"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>',
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]
+      });
     });
+
+
 
 </script>
 </body>

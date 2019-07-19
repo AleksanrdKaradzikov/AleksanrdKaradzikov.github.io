@@ -315,10 +315,6 @@ section {
   background-color: #fff;
   box-shadow: 6px 10px 18px 0 rgba(0, 0, 0, 0.11);
 }
-.feedback-slider_item .fotorama img {
-  width: 100%;
-  height: 30rem;
-}
 .feedback-slider_item p {
   font-size: 1.6rem;
 }
@@ -508,6 +504,111 @@ section {
   content: "✔";
   color: #46b814;
 }
+.materials {
+  background-color: #fff;
+}
+.materials-header {
+  margin-bottom: 6rem;
+  text-align: center;
+}
+.materials-header h2 {
+  margin-bottom: 3rem;
+  font-family: 'ProximaNova_bold', sans-serif;
+}
+.materials-slider {
+  text-align: center;
+}
+.materials-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10000;
+  border: none;
+  background-color: transparent;
+}
+.materials-arrow i {
+  color: #fff;
+  font-weight: 900;
+  font-size: 2.5rem;
+  transition: all 0.3s ease;
+  border: 1px solid #46b814;
+  border-radius: 50%;
+  padding: 1rem;
+  background-color: #46b814;
+}
+.materials-arrow i:hover {
+  color: #e6e6e6;
+}
+.materials-arrow-prev {
+  left: 0;
+}
+.materials-arrow-next {
+  right: 0;
+}
+.materials-block img {
+  display: block;
+  margin: 0 auto;
+  height: 17rem;
+}
+.materials-block h2 {
+  font-family: 'ProximaNova_bold', sans-serif;
+}
+.materials-link {
+  text-decoration: none;
+  color: #46b814;
+  border-bottom: 1px dashed #46b814;
+  transition: color 0.3s ease;
+}
+.materials-link:hover {
+  color: #348a0f;
+  text-decoration: none;
+}
+.tour {
+  background-color: #f5f5f5;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center right;
+  padding-top: 0;
+}
+.tour-subtitle {
+  font-size: 2.2rem;
+  font-family: 'ProximaNova_bold', sans-serif;
+}
+.tour-form h1.tour-form-heading {
+  font-family: 'ProximaNova_bold', sans-serif;
+  font-size: 2rem;
+}
+.uppsell {
+  background-color: #286d0a;
+}
+.uppsell-header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.uppsell-header h2 {
+  margin-bottom: 3rem;
+  font-family: 'ProximaNova_bold', sans-serif;
+  color: #fff;
+}
+.uppsell-header p {
+  color: #fff;
+  font-size: 2rem;
+}
+.uppsell-block {
+  margin-bottom: 2rem;
+  text-align: center;
+  min-height: 20rem;
+}
+.uppsell-block img {
+  width: 100%;
+  max-width: 30rem;
+}
+.uppsell-block p {
+  margin: 2rem 0;
+  font-size: 2rem;
+  color: #fff;
+  font-family: 'ProximaNova_bold', sans-serif;
+}
 .features {
   padding: 10rem 0;
 }
@@ -681,6 +782,17 @@ section {
     transform: translate(-50%, 8px);
   }
 }
+@media (max-width: 767px) {
+  .tour {
+    background-image: none;
+  }
+  .tour-title {
+    text-align: center;
+  }
+  .tour-subtitle {
+    font-size: 1.8rem;
+  }
+}
 @media (max-width: 450px) {
   html,
   body {
@@ -700,6 +812,9 @@ section {
   }
   .modal-content {
     padding: 1rem 2rem;
+  }
+  .feedback-slider_item .fotorama img {
+    height: auto;
   }
   .feedback-slider-btn_prev {
     left: 0rem;

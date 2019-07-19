@@ -39,6 +39,7 @@
 @light: #fff;
 @border-input:#dddddd;
 @problems-color:#e8e8e8;
+@uppsell-bg:#286d0a;
 
 // Basic settings
 html{
@@ -580,6 +581,122 @@ section{
          }
        }
     }
+    // materials styles
+    .materials{
+      background-color:@light;
+      &-header{
+        margin-bottom:6rem;
+        text-align: center;
+         h2{
+           margin-bottom:3rem;
+          .bold();
+        }
+      }
+      // materials-slider
+      &-slider{
+        text-align:center;
+      }
+      // materials-arrow
+      &-arrow{
+        position: absolute;
+        top:50%;
+        transform: translateY(-50%);
+        z-index: 10000;
+        border:none;
+        background-color: transparent;
+        i{
+          color: @light;
+          font-weight: 900;
+          font-size: 2.5rem;
+          transition:all 0.3s ease;
+          border: 1px solid @icons-color;
+          border-radius: 50%;
+          padding: 1rem;
+          background-color: @icons-color;
+          &:hover{
+            color:darken(@light,10%);
+          }
+        }
+        &-prev{
+        left:0;
+        }
+        &-next{
+        right: 0;
+        }
+    }
+      //materials-block
+      &-block{
+         img{
+           display: block;
+           margin: 0 auto;
+           height: 17rem;
+         }
+         h2{
+           .bold();
+         }
+      }
+      // materials link
+      &-link{
+        text-decoration: none;
+        color:@icons-color;
+        border-bottom:1px dashed @icons-color;
+        transition:color 0.3s ease;
+        &:hover{
+          color:darken(@icons-color,10%);
+          text-decoration: none;
+        }
+      }
+    }
+    // tour
+    .tour{
+      background-color:@bg-light;
+      background-repeat:no-repeat;
+      background-size:cover;
+      background-position: center right;
+      padding-top:0;
+      &-subtitle{
+        font-size: 2.2rem;
+        .bold();
+      }
+      &-form{
+        h1.tour-form-heading{
+          .bold();
+          font-size: 2rem;
+        }
+      }
+    }
+    // uppsell styles
+    .uppsell{
+      background-color:@uppsell-bg;
+        &-header{
+          text-align:center;
+          margin-bottom:5rem;
+          h2{
+            margin-bottom:3rem;
+            .bold();
+            color:@light;
+          }
+          p{
+            color:@light;
+            font-size: 2rem;
+          }
+        }
+        &-block{
+          margin-bottom:2rem;
+          text-align: center;
+          min-height:20rem;
+          img{
+            width:100%;
+            max-width: 30rem;
+          }
+            p{
+              margin:2rem 0;
+              font-size:2rem;
+              color:@light;
+              .bold();
+            }
+        }
+    }
 // slick slider styles
    .features{
      padding:10rem 0;
@@ -777,6 +894,18 @@ section{
   
 }
 
+@media(max-width:767px){
+    .tour{
+      background-image: none;
+      &-title{
+        text-align: center;
+      }
+      &-subtitle{
+        font-size: 1.8rem;
+      }
+    }
+}
+
 @media(max-width:450px){
    html, body{
      overflow-x: hidden;
@@ -806,7 +935,6 @@ section{
    .feedback{
       &-slider{
         &_item{
-          &_item{
             .fotorama{
               img{
                 height: auto;
@@ -823,6 +951,7 @@ section{
 
         }
       }
+    }
   // all-inclusived
    .all-inclusived{
      &-block{
@@ -833,4 +962,4 @@ section{
        }
      }
    }
-}
+  }
