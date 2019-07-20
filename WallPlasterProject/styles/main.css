@@ -565,6 +565,7 @@ section {
 }
 .tour {
   background-color: #f5f5f5;
+  background-image: url(../images/tours-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center right;
