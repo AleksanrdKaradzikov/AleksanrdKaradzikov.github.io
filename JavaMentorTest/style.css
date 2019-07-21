@@ -158,7 +158,8 @@ body{
 }
 /* content-block */
 .content-block{
-  flex-basis: 45%;
+   flex-basis: 45%;
+   max-height: 8rem;
    display:flex;
    justify-content: space-around;
    text-align: center;
@@ -203,7 +204,7 @@ body{
       opacity: 0;
   }
    to{
-    max-height: 10rem;
+    max-height: 8rem;
     overflow: visible;
     opacity: 1;
    }
