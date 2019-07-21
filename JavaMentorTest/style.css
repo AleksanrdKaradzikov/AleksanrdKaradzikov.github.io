@@ -209,3 +209,97 @@ body{
     opacity: 1;
    }
 }
+@keyframes showMobContent{
+  from{
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+  }
+   to{
+    max-height: 10rem;
+    height: 10rem;
+    overflow: visible;
+    opacity: 1;
+   }
+}
+/* media */
+@media(min-width:991px) and (max-width:1200px){
+  /* main */
+  .main h1{
+    font-size: 2.5rem;
+  }
+  .main img{
+    max-width: 40rem;
+  }
+  /*  rating*/ 
+  .rating-header{
+    font-size: 0.8rem;
+  }
+  .rating-content{
+    width: 85%;
+  }
+}
+@media(min-width:768px) and (max-width:990px){
+   /* main */
+   .main h1{
+    font-size: 2.2rem;
+  }
+  .main img{
+    max-width: 35rem;
+  }
+  /* rating */
+  .rating-content{
+    width: 90%;
+  }
+  .content-block{
+    height: 10rem;
+    animation: showMobContent 0.5s ease-in-out forwards;
+  }
+  .rating-header{
+    font-size: 0.7rem;
+  }
+
+}
+@media(min-width:600px) and (max-width:767px){
+    /* main */
+   .main h1{
+    font-size: 1.7rem;
+  }
+  .main img{
+    max-width: 25rem;
+  }
+  /* rating */
+  .rating-header{
+    font-size: 0.7rem;
+  }
+  .content-block{
+    flex-basis: 80%;
+    animation: showMobContent 0.5s ease-in-out forwards;
+ }
+ .rating-content h4{
+   font-size: 0.9rem;
+ }
+}
+@media(max-width:599px){
+  /* main */
+  .main h1{
+    font-size: 1.2rem;
+  }
+  .main img{
+    max-width: 20rem;
+  }
+  /* rating */
+  .rating-header{
+    font-size: 0.7rem;
+  }
+  .rating-content{
+    width: 90%;
+  }
+  .content-block{
+    flex-basis: 99%;
+    animation: showMobContent 0.5s ease-in-out forwards;
+ }
+ .rating-content h4{
+   font-size: 0.65rem;
+ }
+}
