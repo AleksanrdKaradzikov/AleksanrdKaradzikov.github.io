@@ -2,21 +2,21 @@
  window.addEventListener('scroll', function(){
       var offset = window.pageYOffset,
           header = document.querySelector('.header');
-
           header.style.backgroundPositionY = offset - header.offsetTop * 0.7 + 'px';
       
  })
 
 // Отправка данных на сервер и вывод категорий на экран
-// Переменная message содержит статус загрузки
+// Переменная message содержит объект со статусом загрузки
 var message = {
     loading: '<img src="image/loading.webp">',
     success:"Загрузить",
     failure: 'Что-то пошло не так...'
 },
     statusMessage = document.createElement('div'),// новый элемент div сюда вывожу  статус загрузки
+    content = document.querySelector('.content'),
     form = document.querySelector('.rating-form'), 
-    send = document.querySelector('.download'); // получаю элемент и классом download
+    send = document.querySelector('.download');
 
     statusMessage.classList.add('status');
     form.appendChild(statusMessage);
@@ -29,14 +29,15 @@ function loader(event){
 }
 
 function validate(event) {
-        // получаю значение выбранное пользователем и вызываю функцию getNews, передаю параметр url и callback
+        // получаю значение выбранное пользователем и вызываю функцию getNews,
+        // передаю параметр url и callback
         event.preventDefault();
-        var groups = document.querySelector('.rating-select').value,
-            groups = encodeURIComponent(groups),
-            url = 'https://frontend-test-api.alex93.now.sh/api/languages?' + groups;
+        var group = document.querySelector('.rating-select').value,
+            param = "group=" + encodeURIComponent(group),
+            url = 'https://frontend-test-api.alex93.now.sh/api/languages?' + param;
 
-            // console.log(groups);
-            // console.log(url);
+            console.log(param);
+            console.log(url);
 
             getNews(url, function(data) {
                 showNews(data);
@@ -64,9 +65,11 @@ function getNews(url, callback) {
             // обрабатываем ошибку
             console.log(xhr.status + ':' + xhr.statusText);
             statusMessage.innerHTML = message.failure;
+            statusMessage.style.color= "red";
         }
         else{
             try{
+                // конвентирую полученный ответ с сервера в виде JSON в обычный обьект
                 var data = JSON.parse(xhr.responseText);
             }catch(e){
                 console.log('Некорректный ответ: ' + e.message);
@@ -80,34 +83,31 @@ function getNews(url, callback) {
         send.innerHTML = 'Загружаю...';
         send.disabled = true;
         statusMessage.innerHTML = message.loading; 
+        content.innerHTML = '';
         
 }
 
-
+// функцтя showNews принимает объект с данными, 
+//проверяет наличиие свойста logo и выводит инормацию на экран
 function showNews(data){
-    // не понимаю как правильно нужно достать данные из объекта и вывести их на экран  по категиям
-    var news = {};
-        for(var key in data.data){
-            console.log(data.data[key]);
-            for(var property in data.data[key]){
-                console.log(property + ":" + data.data[key][property]);
-                news[property] = data.data[key][property]; 
-            }
+
+        var  news = data.data;
              
-
-               
-            //     <div class="img-block">
-            //         <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg">
-            //     </div>
-            //    <div class="discription">
-            //         <p class="name">JavaScript</p>
-            //         <p class="year">Основан в 1995 году</p>
-            //         <p class="project">2131231 проектов на GitHub</p>
-            //         <a class="doc" href="#">Документация</a>
-            //    </div>
-                
-         
-
+        for(var key in news){
+           if(news[key].hasOwnProperty('logo') == true){
+                 content.innerHTML += 
+                    `<div class="content-block">
+                            <div class="img-block">
+                            <img src="${news[key]['logo']}">
+                            </div>
+                            <div class="discription">
+                            <p class="name">${news[key]['name']}</p>
+                            <p class="year">Основан в ${news[key]['year']} году</p>
+                            <p class="project">${news[key]['projectsCount']} проектов на GitHub</p>
+                            <a class="doc" href="${news[key]['docs']}" target="_blank">Документация</a>
+                            </div>
+                    </div>`;     
+           }
         }
+ }
             
-}

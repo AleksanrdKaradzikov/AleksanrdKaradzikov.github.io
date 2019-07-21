@@ -107,16 +107,24 @@ body{
    margin-bottom: 3rem;
 }
 .rating-content{
-  width: 40%;
+  border:1px solid silver;
+  width: 70%;
   margin: 0 auto;
   padding:2rem;
   background-color: #fff;
   border-radius:0.7rem;
 }
+.rating-content h4{
+  margin-bottom: 1rem;
+  padding-left:1rem;
+  color:rgb(56, 109, 206);
+}
+/* rating-form */
 .rating-form{
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  padding-left: 1rem;
 }
 .rating-select{
   display: inline-block;
@@ -141,22 +149,30 @@ body{
   width: 3rem;
   height: 3rem;
 }
-
+/* content */
+.content{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+/* content-block */
 .content-block{
+  flex-basis: 45%;
    display:flex;
    justify-content: space-around;
    text-align: center;
-   width:100%;
-   min-height: 5rem;
    border:1px solid silver;
    border-radius:0.7rem;
-   margin: 1rem 0;
+   margin: 1rem 1rem;
    padding:0.6rem;
+   animation: showContent 0.5s ease-in-out forwards;
 }
 .content-block .img-block{
   flex-basis: 30%;
 }
 .content-block .img-block img{
+  width:100%;
   height: 100%;
 } 
 .content-block .discription{
@@ -176,4 +192,18 @@ body{
 }
 .content-block .discription .doc:hover{
   color:brown;
+}
+
+/* animation showContent*/
+@keyframes showContent{
+  from{
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+  }
+   to{
+    max-height: 8rem;
+    overflow: visible;
+    opacity: 1;
+   }
 }
