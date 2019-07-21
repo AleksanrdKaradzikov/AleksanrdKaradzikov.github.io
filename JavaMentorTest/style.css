@@ -203,7 +203,7 @@ body{
       opacity: 0;
   }
    to{
-    max-height: 8rem;
+    max-height: 10rem;
     overflow: visible;
     opacity: 1;
    }
