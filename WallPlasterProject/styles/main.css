@@ -37,7 +37,7 @@ img {
   transition: all 0.2s ease;
 }
 .button:hover {
-  cursor: pointet;
+  cursor: pointer;
   background-color: #e3a103;
 }
 button:focus,
@@ -610,6 +610,100 @@ section {
   color: #fff;
   font-family: 'ProximaNova_bold', sans-serif;
 }
+.contacts {
+  background: url(../images/feedback/feedback-bg.jpg) center center no-repeat;
+  background-size: cover;
+}
+.contacts h2 {
+  font-family: 'ProximaNova_bold', sans-serif;
+}
+.contacts p {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+.contacts .map {
+  margin-bottom: 1rem;
+}
+.contacts-link {
+  display: inline-block;
+  color: #1a1820;
+  border-bottom: 1px dashed #1a1820;
+  transition: color 0.3s ease;
+}
+.contacts-link:hover {
+  color: #020203;
+  text-decoration: none;
+}
+.contacts-form h1.contacts-form-heading {
+  font-size: 1.8rem;
+  font-family: 'ProximaNova_reg', sans-serif;
+}
+.contacts-form-textarea {
+  display: block;
+  width: 100%;
+  border: 1px solid #dddddd;
+  padding: 1.7rem;
+  margin: 2rem 0;
+  border-radius: 5px;
+}
+footer {
+  padding: 4rem 0;
+  background-color: #f5f5f5;
+}
+footer .logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+footer .logo img {
+  width: 70px;
+  height: 70px;
+}
+footer .logo .logotype-text {
+  font-size: 2rem;
+  margin-left: 20px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+footer .logo .logotype-text span:nth-child(1) {
+  color: #1a1820;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin-bottom: 5px;
+}
+footer .logo .logotype-text span:nth-child(2) {
+  color: #1a1820;
+  font-weight: normal;
+}
+footer .footer-phone {
+  text-align: center;
+}
+footer .footer-phone p {
+  font-size: 2rem;
+  font-family: 'ProximaNova_bold', sans-serif;
+}
+footer .footer-phone a {
+  display: inline-block;
+  color: #1a1820;
+  border-bottom: 1px dashed #1a1820;
+  transition: color 0.3s ease;
+}
+footer .footer-phone a:hover {
+  color: #020203;
+  text-decoration: none;
+}
+footer .footer-icons {
+  text-align: center;
+}
+footer .footer-icons i {
+  color: #fff;
+  font-size: 2.5rem;
+  background-color: #46b814;
+  padding: 1.5rem;
+  border-radius: 50%;
+}
 .features {
   padding: 10rem 0;
 }
@@ -792,6 +886,13 @@ section {
   }
   .tour-subtitle {
     font-size: 1.8rem;
+  }
+  footer .footer-phone {
+    margin-bottom: 2rem;
+  }
+  footer .logo {
+    justify-content: center;
+    margin-bottom: 2rem;
   }
 }
 @media (max-width: 450px) {
