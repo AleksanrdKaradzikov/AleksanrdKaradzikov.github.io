@@ -3,7 +3,7 @@
 
 ### моё небольшое портфолио:
 
-*[https://aleksanrdkaradzikov.github.io/homeProject/](https://aleksanrdkaradzikov.github.io/homeProject/) HomeProject, небольшой креативный шаблон сайта, подойдет под любой проект
+*[https://aleksanrdkaradzikov.github.io/homeProject/](https://aleksanrdkaradzikov.github.io/homeProject/ "_blank") HomeProject, небольшой креативный шаблон сайта, подойдет под любой проект
 
 *[https://aleksanrdkaradzikov.github.io/WallPlasterProject/](https://aleksanrdkaradzikov.github.io/WallPlasterProject/) Шаблон сайта строительной компании (штукатурка стен)
 
