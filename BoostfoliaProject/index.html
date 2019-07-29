@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/slick.css" type="text/css">
+    <link rel="stylesheet" href="styles/slick-theme.css" type="text/css">
+    <link rel="stylesheet" href="styles/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="styles/style.css" type="text/css">
+    <title>Document</title>
+</head>
+<body>
+     <header class="header">
+            <div class="header-navbar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3">
+                            <div class="header-navbar_logo">
+                                    <img src="img/logo.png" alt="">
+                                     <span>BOOSTFOLIA</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-1 col-lg-offset-8 col-md-1 col-md-offset-8">
+                                <div class="burg">
+                                    <span class="icon"></span>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="header-navbar_menu">
+                        <div class="row">
+                            <div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-8 col-sm-offset-2"><a href="#">ABOUT US</a></div>
+                            <div class="col-lg-2 col-lg-offset-0 col-md-2 col-md-offset-0 col-sm-8 col-sm-offset-2"><a href="#">WORKS</a></div>
+                            <div class="col-lg-2 col-lg-offset-0 col-md-2 col-md-offset-0 col-sm-8 col-sm-offset-2"><a href="#">WHO WE ARE</a></div>
+                            <div class="col-lg-2 col-lg-offset-0 col-md-2 col-md-offset-0 col-sm-8 col-sm-offset-2"><a href="#">BLOG POSTS</a></div>
+                            <div class="col-lg-2 col-lg-offset-0 col-md-2 col-md-offset-0 col-sm-8 col-sm-offset-2"><a href="#">GET IN TOUCH</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-content">
+                     <div class="header-content-slider">
+                                <div class="slider-block bg-1">
+                                        <h1>WE THINK CREATIVE BE CREATIVE</h1>
+                                        <h3>LIKE TO DO CREATIVE WORKS</h3>
+                                    </div>
+                                    <div class="slider-block bg-2">
+                                        <h1>WE THINK CREATIVE BE CREATIVE</h1>
+                                        <h3>LIKE TO DO CREATIVE WORKS</h3>
+                                    </div>
+                                    <div class="slider-block bg-3">
+                                        <h1>WE THINK CREATIVE BE CREATIVE</h1>
+                                        <h3>LIKE TO DO CREATIVE WORKS</h3>
+                                    </div>
+                     </div> 
+            </div>
+     </header>
+     <!-- /.header -->
+
+
+
+
+
+<!-- Jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Slick.js -->
+<script src="js/slick.min.js"></script>
+<script>
+    $(window).scroll(function(event) {
+          if(document.body.scrollTop > 300 || document.documentElement.scrollTop > 300){
+              $('.header-navbar').addClass('fixed');
+          }else{
+            $('.header-navbar').removeClass('fixed');
+          }
+    })
+    $(document).ready(function() {
+        // header slick slider init
+        $('.header-content-slider').slick({
+            speed: 500,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            prevArrow:'<button type="button" class="header-btn header-btn-prev"><</button>',
+            nextArrow:'<button type="button" class="header-btn header-btn-next">></button>'
+        });
+
+        $('.header-navbar_menu').hide();
+        $('.burg').on('click', function() {
+            $(this).toggleClass('active');
+            $('.header-navbar_menu').slideToggle(300);
+        });
+    });
+</script>
+</body>
+</html>

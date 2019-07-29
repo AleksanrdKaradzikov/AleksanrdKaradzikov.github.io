@@ -67,9 +67,9 @@
                      <h1 class="main-form-heading text-center">Для расчета точной стоимости <br> закажите <strong>выезд замерщика</strong></h1>
                       <form action="">
                         <label for="">Ваше имя</label>
-                        <input class="main-form-input"  type="text" >
+                        <input class="main-form-input" required  type="text" >
                         <label for="">Ваш номер телефона</label>
-                        <input class="main-form-input" type="text" >
+                        <input class="main-form-input" required id="phone" type="text" >
                         <button class="main-form-btn button" type="submit">оставте заявку</button>
                         <small>Подарок в день обращения</small>
                       </form>
@@ -301,12 +301,12 @@
 
                           <div class="col-lg-6 col-md-6">
                               <label for="">Ваше имя</label>
-                              <input class="feedback-form-input"  type="text">
+                              <input class="feedback-form-input" required type="text">
                           </div>
 
                           <div class="col-lg-6 col-md-6">
                               <label for=""> Номер телефона</label>
-                              <input class="feedback-form-input" type="text">
+                              <input class="feedback-form-input" required id="phone" type="text">
                           </div>
 
                         </div>
@@ -560,9 +560,9 @@
                        <h1 class="main-form-heading tour-form-heading text-center">Оставьте контактные данные для связи</h1>
                         <form action="">
                           <label for="">Ваше имя</label>
-                          <input class="main-form-input"  type="text" >
+                          <input class="main-form-input"  required type="text" >
                           <label for="">Ваш номер телефона</label>
-                          <input class="main-form-input" type="text" >
+                          <input class="main-form-input" required id="phone" type="text" >
                           <button class="main-form-btn button" type="submit">Записаться на просмотр</button>
                           <small>Подберем ближайший к Вам объект</small>
                         </form>
@@ -621,13 +621,13 @@
                       <h1 class="main-form-heading contacts-form-heading text-center">Оставьте контактные данные для связи</h1>
                        <form action="">
                          <label for="">Ваше имя:</label>
-                         <input class="main-form-input"  type="text" >
+                         <input class="main-form-input" required type="text" >
                          <label for="">Ваш номер телефона:</label>
-                         <input class="main-form-input" type="text" >
+                         <input class="main-form-input" id="phone" required type="text" >
                          <label for="">Ваше email:</label>
-                         <input class="main-form-input"  type="email" >
+                         <input class="main-form-input"  required type="email" >
                          <label for="">Сообщение:</label>
-                         <textarea class="contacts-form-textarea" rows="5" type="text" ></textarea>
+                         <textarea class="contacts-form-textarea" rows="5" type="text" required ></textarea>
                          <button class="main-form-btn button" type="submit">Оставте заявку</button>
                        </form>
                     </div>
@@ -678,7 +678,7 @@
                               <label for="">Ваше имя</label>
                               <input class="main-form-input name"  name="user_name" type="text" >
                               <label for="">Ваш номер телефона</label>
-                              <input class="main-form-input tel" name="user_tel" type="text" >
+                              <input class="main-form-input tel" id="phone" name="user_tel" type="text" >
                               <label for="">Сообщение</label>
                               <textarea class="main-form-input modal-message" name="user_msg" rows="5" ></textarea>
                               <button class="main-form-btn button send-btn" type="submit">оставте заявку</button>
@@ -701,6 +701,8 @@
 <!-- MyParallax -->
 <script src="js/MyParallaxLibrarys.js"></script>
  <!--main script-->
+ <!-- jquerymaskinput -->
+ <script src="js/jquery.maskedinput.min.js"></script>
  <script src="js/main.js"></script>
 </body>
 </html>

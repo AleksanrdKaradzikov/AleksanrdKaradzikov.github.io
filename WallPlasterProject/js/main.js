@@ -4,6 +4,7 @@
   wow.init();
   // Скрипт отправки письма на почту с помощью ajax
   $(document).ready(function() {
+    $("#phone").mask("+7 (999) 999-99-99");
     $('.error').hide();
     $('.error').css('color', 'red');
     $('.send-btn').on('click', function(event) {
@@ -18,7 +19,7 @@
               fail = "Имя не менее трех символов"; 
               $('.name').css('border-color','red');
             }
-            if(userTel < 11 ) {
+            if(userTel < 10 ) {
               fail = "Введите корркетный мобильный телефон";
               $('.tel').css('border-color','red');
             }
