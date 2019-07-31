@@ -1049,6 +1049,13 @@ footer .footer-icons i:hover {
   cursor: pointer;
   text-shadow: 2px 2px 12px #f3724d;
 }
+.loading {
+  color: #ffffff;
+  margin: 1rem auto;
+  display: block;
+  width: 5rem;
+  height: 5rem;
+}
 /* media */
 @media screen and (max-width: 500px) {
   /* header-navbar меню  ссылки */
