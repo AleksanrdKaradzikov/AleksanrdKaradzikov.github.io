@@ -250,6 +250,7 @@ body {
   padding: 3rem 0;
   box-shadow: 5px 5px 10px #d5bebe;
   border-radius: 0.2rem;
+  margin-bottom: 1rem;
 }
 .about-block p {
   font-size: 0.8rem;
@@ -273,6 +274,7 @@ body {
   align-items: center;
   height: 20rem;
   background-color: #000;
+  margin-bottom: 1rem;
 }
 .about-video_title h2 {
   color: #ffffff;
@@ -659,6 +661,8 @@ body {
 .blog-post {
   border-radius: 0.4rem;
   background-color: #e9dddd;
+  margin-bottom: 1rem;
+  box-shadow: 5px 5px 10px #e9dddd;
 }
 .blog-post-img {
   border-top-right-radius: 0.4rem;
@@ -874,13 +878,30 @@ body {
   background-color: #ffffff;
 }
 .contact {
+  position: relative;
   text-align: center;
   padding: 2rem;
+  background-image: url(../img/video-bg.png);
+  background-size: cover;
+  background-position: center center;
+  z-index: 10;
+}
+.contact::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.4;
+  z-index: -1;
 }
 .contact p {
   width: 70%;
   margin: 2rem auto 5rem auto;
-  color: #4d4140;
+  color: #ffffff;
+  font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .contact-form {
   text-align: left;
@@ -889,6 +910,7 @@ body {
   font-size: 1.5rem;
   display: block;
   margin-bottom: 1rem;
+  color: #ffffff;
   font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-transform: uppercase;
 }
@@ -907,11 +929,13 @@ body {
   outline: none;
   color: #000;
   border-bottom: 1px solid #e9dddd;
+  background-color: transparent;
 }
 .contact-form input:focus {
   border-bottom: 1px solid #f3724d;
 }
 .contact-form textarea {
+  margin-bottom: 2rem;
   width: 100%;
   border: none;
   font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -919,7 +943,7 @@ body {
   outline: none;
   color: #000;
   border-bottom: 1px solid #e9dddd;
-  margin-bottom: 2rem;
+  background-color: transparent;
 }
 .contact-form textarea:focus {
   border-bottom: 1px solid #f3724d;
@@ -1024,4 +1048,13 @@ footer .footer-icons i:hover {
   transform: translateY(-5px);
   cursor: pointer;
   text-shadow: 2px 2px 12px #f3724d;
+}
+/* media */
+@media screen and (max-width: 500px) {
+  /* header-navbar меню  ссылки */
+  .header-navbar_menu a {
+    display: block;
+    text-align: center;
+    margin: 0.2rem 0;
+  }
 }

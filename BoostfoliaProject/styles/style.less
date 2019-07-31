@@ -277,6 +277,7 @@ body{
         padding:3rem 0;
         box-shadow: 5px 5px 10px darken(@about-block-color,10%);
         border-radius: 0.2rem;
+        margin-bottom: 1rem;
         p{
             font-size:0.8rem;
             width:80%;
@@ -300,6 +301,7 @@ body{
             align-items: center;
             height: 20rem;
             background-color:@dark-color;
+            margin-bottom: 1rem;
             h2{
                 color:@bg-light;
                 margin-bottom: 2rem;
@@ -706,6 +708,8 @@ body{
     &-post{
         border-radius:0.4rem;
         background-color:@about-block-color;
+        margin-bottom:1rem;
+        box-shadow: 5px 5px 10px @about-block-color;
         &-img{
             border-top-right-radius: 0.4rem;
             border-top-left-radius: 0.4rem;
@@ -929,12 +933,30 @@ body{
 }
 // contact
 .contact{
+    position: relative;
     text-align:center;
     padding:2rem;
+    background-image: url(../img/video-bg.png);
+    background-size: cover;
+    background-position: center center;
+    z-index: 10;
+    &::before{
+        content: '';
+        position: absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height: 100%;
+        background-color:@dark-color;
+        opacity: 0.4;
+        z-index: -1;
+
+    }
     p{
         width:70%;
         margin:2rem auto 5rem auto;
-        color:@text-color;
+        color:@bg-light;
+        .bold();
     }
     &-form{
         text-align:left;
@@ -942,6 +964,7 @@ body{
             font-size:1.5rem;
             display: block;
             margin-bottom:1rem;
+            color:@bg-light;
             .bold();
             text-transform:uppercase;
             span{
@@ -960,11 +983,13 @@ body{
             outline:none;
             color:@dark-color;
             border-bottom:1px solid @about-block-color;
+            background-color:transparent;
             &:focus{
                 border-bottom:1px solid @menu-link-color;  
             }
         }
         textarea{
+            margin-bottom: 2rem;
             width:100%;
             border:none;
             .bold();
@@ -972,7 +997,7 @@ body{
             outline:none;
             color:@dark-color;
             border-bottom:1px solid @about-block-color;
-            margin-bottom: 2rem;
+            background-color:transparent;
             &:focus{
                 border-bottom:1px solid @menu-link-color;  
             }
@@ -1085,5 +1110,16 @@ footer{
                text-shadow: 2px 2px 12px @menu-link-color;
             }
         }
+    }
+}
+
+/* media */
+
+@media screen and (max-width:500px) {
+    /* header-navbar меню  ссылки */
+    .header-navbar_menu a {
+      display: block;
+      text-align: center;
+      margin:0.2rem 0;
     }
 }

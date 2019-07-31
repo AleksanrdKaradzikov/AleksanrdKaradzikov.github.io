@@ -40,4 +40,12 @@ let up = document.querySelectorAll('.up'),
     });
     
  
-   
+//    parallax эффект для блока contact
+
+let contact = document.querySelector('.contact');
+
+window.addEventListener('scroll', function() {
+    let offset = window.pageYOffset;
+    
+    contact.style.backgroundPositionY = (offset - contact.offsetTop) * 0.7  + 'px';
+})
