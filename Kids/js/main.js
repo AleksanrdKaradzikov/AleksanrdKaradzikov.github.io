@@ -15,17 +15,14 @@ $(document).ready(function(){
     });
 });
 
-// эффект пульсации кнопки
+// модальные окна
+// about modal
 $(document).ready(function() {
-    $(".ripple").on("click",function(event){
-        $(this).append("<span class='ripple-effect'></span>");
-        $(this).find(".ripple-effect").css({
-           left:event.pageX-$(this).position().left,
-            top:event.pageY-$(this).position().top
-          }).animate({
-            opacity: 0,
-          }, 1500, function() {
-           $(this).remove();
-          });
-        });
+    $('.about-modal, .modal-overlay').hide();
+    $('.content-btn').on('click', function() {
+            $('.about-modal, .modal-overlay').fadeIn(600);
+    $('.close').on('click', function() {
+            $('.about-modal, .modal-overlay').fadeOut(600);
+        })
+    })
 });
