@@ -14,3 +14,18 @@ $(document).ready(function(){
         prevArrow:'<button type="button" class="arrow arrow-left"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i></button>'
     });
 });
+
+// эффект пульсации кнопки
+$(document).ready(function() {
+    $(".ripple").on("click",function(event){
+        $(this).append("<span class='ripple-effect'></span>");
+        $(this).find(".ripple-effect").css({
+           left:event.pageX-$(this).position().left,
+            top:event.pageY-$(this).position().top
+          }).animate({
+            opacity: 0,
+          }, 1500, function() {
+           $(this).remove();
+          });
+        });
+});
