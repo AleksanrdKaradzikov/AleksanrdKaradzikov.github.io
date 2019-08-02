@@ -618,6 +618,71 @@ img {
   color: #FDFBEC;
   font-size: 5.5rem;
 }
+.parents {
+  padding: 2rem;
+  background-color: #A5E1C6;
+  text-align: center;
+}
+.parents-heading {
+  font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+.parents-card p {
+  font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 400;
+}
+.parents-card .line {
+  display: block;
+  width: 20%;
+  margin: 1rem auto;
+  height: 0.5px;
+  background: #333;
+}
+.parents-card .parents-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.parents-card .parents-img img {
+  margin-right: 0.5rem;
+  display: inline-block;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  border: 2px solid #47C2D1;
+}
+.parents-card .parents-img .name {
+  font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+}
+.parents .slick-active {
+  outline: none;
+}
+.parents .arrow {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  background: transparent;
+  z-index: 10;
+  outline: none;
+}
+.parents .arrow i {
+  font-size: 4rem;
+  color: #F6F5E2;
+  transition: all 0.3s ease;
+}
+.parents .arrow i:hover {
+  color: #eeecc7;
+  text-shadow: 1px 1px 5px #F6F5E2;
+}
+.parents .arrow-right {
+  right: 0;
+}
+.parents .arrow-left {
+  left: 1rem;
+}
 .modal-overlay {
   display: none;
   position: fixed;
@@ -824,6 +889,9 @@ img {
   .main-slider .arrow i {
     font-size: 2.5rem;
   }
+  .about-content .box h1 {
+    font-size: 1.2rem;
+  }
   .about-content .content-block {
     min-height: 30rem;
   }
@@ -843,5 +911,11 @@ img {
   }
   .about-modal .modal-content form button {
     width: 80%;
+  }
+  .children-heading {
+    font-size: 1.5rem;
+  }
+  .parents .arrow i {
+    font-size: 2.2rem;
   }
 }

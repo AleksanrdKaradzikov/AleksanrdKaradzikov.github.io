@@ -676,7 +676,74 @@ img{
         }
     }
 }
+// стили для блока parents
+.parents{
+    padding:2rem;
+    background-color:#A5E1C6;
+    text-align:center;
+    &-heading{
+        .bold();
+        margin-bottom:2rem;
+    }
+    &-card{
+        p{
+            .reg();
+        }
+        .line{
+            display:block;
+            width:20%;
+            margin:1rem auto;
+            height: 0.5px;
+            background: #333;
+        }
+        .parents-img{
+            display:flex;
+            justify-content:center;
+            align-items: center;
+            img{
+                margin-right:0.5rem;
+                display: inline-block;
+                width:6rem;
+                height:6rem;
+                border-radius:50%;
+                border:2px solid @blue-color;
+            }
+            .name{
+                .bold();
 
+            }
+        }
+        
+    }
+    .slick-active{
+        outline: none;
+    }
+    .arrow{
+        position: absolute;
+        top:50%;
+        transform: translate(-50%, -50%);
+        border:none;
+        background: transparent;
+        z-index: 10;
+        outline: none;
+        i{
+            font-size: 4rem;
+            color:@white-color;
+            transition: all 0.3s ease;
+            &:hover{
+                color:darken(@white-color,7%);
+                text-shadow:1px 1px 5px @white-color;
+            }
+        }
+    }
+    .arrow-right{
+        right:0;
+    }
+    .arrow-left{
+        left:1rem;
+    }
+   
+}
 // модальные окна
 // abaut modal
 .modal-overlay{
@@ -881,6 +948,11 @@ img{
         }
     }
     .about-content{
+        .box{
+         h1{
+            font-size:1.2rem;
+         }
+        }
         .content-block{
             min-height:30rem;
         }
@@ -907,5 +979,16 @@ img{
            }
         }
     }
+    .children-heading{
+        font-size:1.5rem;
+    }
+    .parents{
+        .arrow{
+            i{
+                font-size:2.2rem;
+            }
+        }
+    }
+    
 }
 
