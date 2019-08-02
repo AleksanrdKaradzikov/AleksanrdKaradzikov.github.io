@@ -4,6 +4,13 @@ $(document).ready(function(){
         $(this).toggleClass('active');
         $('.header-mobile-navigation').slideToggle(400);
     });
+    // плавный скролл
+    $('a[href^="#"]').on('click',function(event) {
+        event.preventDefault();
+        var _href = $(this).attr('href');
+        $('html, body').animate({scrollTop:$(_href).offset().top + 'px'},1000);
+        return false;
+    });
 });
 
 // slick init

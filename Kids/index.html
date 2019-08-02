@@ -27,8 +27,8 @@
                         </div>
                         <div class="header-navigation">
                             <nav>
-                                <a href="#" class="header-navigation_link">Главная</a>
-                                <a href="#" class="header-navigation_link">О нас</a>
+                                <a href="#home" class="header-navigation_link">Главная</a>
+                                <a href="#about" class="header-navigation_link">О нас</a>
                                 <a href="#" class="header-navigation_link">Услуги</a>
                                 <a href="#" class="header-navigation_link">Блог</a>
                                 <a href="#" class="header-navigation_link">Галлерея</a>
@@ -41,17 +41,18 @@
                             </div>
                         </div>
          </div>
-     </header>
-        <nav class="header-mobile-navigation">
-                <a href="#" class="header-mobile_link">Главная</a>
-                <a href="#" class="header-mobile_link">О нас</a>
+         <nav class="header-mobile-navigation">
+                <a href="#home" class="header-mobile_link">Главная</a>
+                <a href="#about" class="header-mobile_link">О нас</a>
                 <a href="#" class="header-mobile_link">Услуги</a>
                 <a href="#" class="header-mobile_link">Блог</a>
                 <a href="#" class="header-mobile_link">Галлерея</a>
                 <a href="#" class="header-mobile_link">Контакты</a>
         </nav>
+     </header>
+        
         <!-- /.header-mobile-navigation -->
-        <main class="main parallax-window" data-parallax="scroll" data-image-src="img/main-bg.jpg">
+        <main class="main parallax-window" data-parallax="scroll" data-image-src="img/main-bg.jpg" id="home">
                 <div class="container">
                     <div class="main-slider">
                         <h1 class="main-heading">
@@ -77,10 +78,10 @@
                 </div>
         </main>
         <!-- /.main -->
-        <section class="about">
+        <section class="about" id="about">
             <div class="container">
                 <div class="row">
-                        <div class="col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0 col-xs-8 col-xs-offset-2">
+                        <div class="col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0 col-xs-12">
                                 <div class="about-card">
                                     <div class="img-block">
                                         <a href="#"><img src="img/about1.jpg" alt=""></a>
@@ -89,7 +90,7 @@
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio tempora iure, cum reprehenderit voluptate temporibus velit tempore inventore harum, accusantium sed hic. Iusto officia nulla quos iste non tempora fugiat.</p>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0 col-xs-8 col-xs-offset-2">
+                            <div class="col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0 col-xs-12">
                                 <div class="about-card">
                                     <div class="img-block">
                                         <a href="#"><img src="img/about2.jpg" alt=""></a>
@@ -98,7 +99,7 @@
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio tempora iure, cum reprehenderit voluptate temporibus velit tempore inventore harum, accusantium sed hic. Iusto officia nulla quos iste non tempora fugiat.</p>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0 col-xs-8 col-xs-offset-2">
+                            <div class="col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0 col-xs-12">
                                 <div class="about-card">
                                     <div class="img-block">
                                         <a href="#"><img src="img/about3.jpg" alt=""></a>
@@ -114,7 +115,7 @@
                                     <p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod
                                             tempor incididunt ut labore et dolore magna.</p>
                                     <div class="row">
-                                                    <div class="col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0 col-xs-8 col-xs-offset-2">
+                                                    <div class="col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0 col-xs-10 col-xs-offset-1">
                                                         <div class="content-block content-red">
                                                             <h2>Who We Are</h2>
                                                             <img src="img/about-content.jpg" alt="Кто мы такие?">
@@ -122,7 +123,7 @@
                                                         </div>
                                                         <button class="content-btn red-btn" type="button">Узнать подробнее</button>
                                                     </div>
-                                                    <div class="col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0 col-xs-8 col-xs-offset-2">
+                                                    <div class="col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0 col-xs-10 col-xs-offset-1">
                                                         <div class="content-block content-orange">
                                                             <h2>Why Choose Us</h2>
                                                             <ul>
@@ -134,7 +135,7 @@
                                                         </div>
                                                         <button class="content-btn orange-btn" type="button">Узнать подробнее</button>
                                                     </div>
-                                                    <div class="col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0 col-xs-8 col-xs-offset-2">
+                                                    <div class="col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0 col-xs-10 col-xs-offset-1">
                                                         <div class="content-block content-blue">
                                                             <h2>Popular Classes</h2>
                                                             <ul>
@@ -161,10 +162,25 @@
     <!-- модальные окна -->
         <div class="about-modal">
             <!-- не скролиться -->
+            <h4>
+                <p>Детский клуб острововок 
+                    <span class="red">k</span>
+                    <span class="orange">i</span>
+                    <span class="blue">d</span>
+                    <span class="green">s</span>
+                </p>
+                </h4>
+                <p>оставте заявку и мы свяжемся с вами в ближайщее время</p>
             <button class="close">&times;</button>
             <!-- скролится, контент модального окна -->
             <div class="modal-content">
-
+                  <form action="#">
+                      <label for="name">Ваше имя:</label>
+                      <input type="text" name="name" id="name" placeholder="Александра">
+                      <label for="phone">Ваш телефон:</label>
+                      <input type="text" name="phone" id="phone" placeholder="8988-232-38-93">
+                      <button type="button">Отправить</button>
+                  </form>
             </div>
         </div>
         <!-- modal ovelray общее затемнее для модального окна -->
