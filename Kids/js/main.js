@@ -40,3 +40,43 @@ $(document).ready(function() {
         })
     })
 });
+
+
+// preloader
+function preloader() {
+   $(document).ready(function() {
+        
+      setInterval(function(){
+        let p = $('.preloader');
+        p.css('opacity', 0);
+
+        setInterval(function() {
+            p.remove();
+        },parseInt(p.css('transition-duration') * 1000));
+
+      },1000);
+
+   })
+}
+
+preloader();
+
+// gallery
+
+$(document).ready(function() {
+    $('#all').attr('disabled', 'disabled');
+    $('.gallary-buttuns button').on('click', function() {
+        $('#all').attr('disabled', false);
+        let get_id = this.id;
+        let get_current = $('.photos .' + get_id);
+
+        $('.photo').not(get_current).hide(700);
+        $(get_current).show(700);
+
+    });
+
+    $('#all').on('click', function() {
+         $('.photo').show(700);
+         $('#all').attr('disabled', 'disabled');
+    })
+});
