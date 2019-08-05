@@ -968,6 +968,9 @@ footer .footer-top .orange-block {
   background-color: #F2A34D;
   font-size: 1.8rem;
 }
+footer .footer-top .orange-block p {
+  margin: 0;
+}
 footer .footer-top .orange-block i {
   display: inline-block;
   margin-right: 1rem;
@@ -986,6 +989,9 @@ footer .footer-top .blue-block {
   color: #FDFBEC;
   background-color: #47C2D1;
   font-size: 1.2rem;
+}
+footer .footer-top .blue-block p {
+  margin: 0;
 }
 footer .footer-top .blue-block i {
   display: inline-block;
@@ -1064,7 +1070,7 @@ footer .footer-bottom .right .twit:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 200;
+  z-index: 3000;
   transition: all 0.3s ease-in-out;
 }
 .preloader img {
@@ -1365,5 +1371,25 @@ footer .footer-bottom .right .twit:hover {
     width: 90%;
     margin: auto;
     text-align: center;
+  }
+}
+@media (max-width: 360px) {
+  footer .footer-top .red-block {
+    font-size: 1.2rem;
+  }
+  footer .footer-top .red-block i {
+    font-size: 1.5rem;
+  }
+  footer .footer-top .blue-block p {
+    font-size: 1rem;
+  }
+  footer .footer-top .blue-block i {
+    font-size: 1.5rem;
+  }
+  footer .footer-top .orange-block p {
+    font-size: 1.2rem;
+  }
+  footer .footer-top .orange-block i {
+    font-size: 1.5rem;
   }
 }

@@ -1020,6 +1020,9 @@ footer{
             color:@bg-color;
             background-color: @orange-color;
             font-size: 1.8rem;
+            p{
+                margin:0;
+            }
             i{
                 display:inline-block;
                 margin-right: 1rem;
@@ -1038,6 +1041,9 @@ footer{
             color:@bg-color;
             background-color: @blue-color;
             font-size: 1.2rem;
+            p{
+                margin:0;
+            }
             i{
                 display:inline-block;
                 margin-right: 1rem;
@@ -1117,7 +1123,7 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 200;
+    z-index: 3000;
     transition: all 0.3s ease-in-out;
     img{
         width: 10rem;
@@ -1444,6 +1450,33 @@ footer{
         }
        } 
     }
-    
 }
 
+@media (max-width:360px){
+    footer{
+        .footer-top{
+            .red-block{
+                font-size: 1.2rem;
+                i{
+                    font-size: 1.5rem;
+                }
+            }
+            .blue-block{
+                p{
+                    font-size: 1rem;
+                }
+                i{
+                    font-size: 1.5rem;
+                }
+            }
+            .orange-block{
+                p{
+                    font-size: 1.2rem;
+                }
+                i{
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}

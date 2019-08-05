@@ -80,3 +80,25 @@ $(document).ready(function() {
          $('#all').attr('disabled', 'disabled');
     })
 });
+
+
+
+
+// fotorama-modal
+
+
+$(document).ready(function() {
+    $('.modal-fotorama').hide();
+    $('.fotorama-overlow').hide();
+    $('.fotorama-active').on('click', function() {
+        $('.modal-fotorama').show(600);
+        $('.fotorama-overlow').fadeIn(300);  
+    });
+    $('.fotorama-close').on('click', function() {
+        $('.modal-fotorama').hide(600);
+    $('.fotorama-overlow').fadeOut(300);
+    })
+});
+$(function () {
+    $('.fotorama').fotorama();
+  });
