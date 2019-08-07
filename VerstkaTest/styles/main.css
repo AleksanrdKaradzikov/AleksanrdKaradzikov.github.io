@@ -442,6 +442,18 @@ body {
     margin: 2rem auto;
   }
 }
+@media (max-width: 500px) {
+  .forms form .input-block {
+    flex-direction: column;
+  }
+  .forms form .input-block label[for="phone"] {
+    top: 5rem;
+    left: 2rem;
+  }
+  .forms form .checking {
+    flex-direction: column;
+  }
+}
 @media (max-width: 420px) {
   .container {
     max-width: 600px;
