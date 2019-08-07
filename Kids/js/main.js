@@ -99,6 +99,25 @@ $(document).ready(function() {
     $('.fotorama-overlow').fadeOut(300);
     })
 });
+
 $(function () {
     $('.fotorama').fotorama();
   });
+
+
+
+  $(document).ready(function() {
+    $('.go_top').hide();
+    $(window).on('scroll', function() {
+        if(document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
+            $('.go_top').fadeIn(600);  
+        }else{
+            $('.go_top').fadeOut(600);
+        }
+    });
+    $('.go_top').on('click', function() {
+        $('html, body').animate({
+            scrollTop:0
+        }, 1000);
+    });
+  })
