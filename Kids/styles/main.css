@@ -1574,7 +1574,7 @@ footer .footer-bottom .right .twit:hover {
   display: inline-block;
   margin-left: 0.5rem;
 }
-.comments #disqus_thread {
+.comments #mc-container {
   background-color: #FDFBEC;
   padding: 1rem;
   border-radius: 0.4rem;
