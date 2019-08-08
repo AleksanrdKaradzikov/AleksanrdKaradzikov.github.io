@@ -64,7 +64,7 @@
                  <section class="services">
                      <div class="container">
                          <div class="row">
-                             <div class="col-lg-10 col-lg-offset-1">
+                             <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
                                     <div class="services-block" id="mini-garden">
                                        <div class="img-block">
                                             <img src="img/servises/servises1.jpg" alt="">
@@ -139,8 +139,8 @@
                             Комментарии<span><i class="fa fa-comment" aria-hidden="true"></i></span>
                          </h1>
                          <div class="row">
-                             <div class="col-lg-10 col-lg-offset-1">
-                                    <div id="disqus_thread"></div>
+                             <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+                                    <!-- <div id="disqus_thread"></div>
 <script>
 
 /**
@@ -160,8 +160,19 @@ this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your pag
                                     (d.head || d.body).appendChild(s);
                                     })();
 </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                            
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript> -->
+                            <!-- Put this script tag to the <head> of your page -->
+<script type="text/javascript" src="https://vk.com/js/api/openapi.js?162"></script>
+
+<script type="text/javascript">
+  VK.init({apiId: API_ID, onlyWidgets: true});
+</script>
+
+<!-- Put this div tag to the place, where the Comments block will be -->
+<div id="vk_comments"></div>
+<script type="text/javascript">
+VK.Widgets.Comments("vk_comments", {limit: 10, attach: "*"});
+</script>
                              </div>
                          </div>
                      </div>
@@ -209,7 +220,7 @@ this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your pag
                                     <p>Copyright &copy; 2019. Все права защищены. Веб-дизайнер <a href="https://vk.com/karadzhikov.shura">Aleksandr Karadzikov</a></p> 
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-sm-10 col-sm-offset-1 col-xs-12">
                                     <div class="bottom-block right">
                                             <div class="icons-wrap">
                                                 <a class="vk" href="#"><i class="fa fa-vk" aria-hidden="true"></i></a>
