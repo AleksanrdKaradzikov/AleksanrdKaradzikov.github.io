@@ -329,27 +329,27 @@
                             </div>
                             <div class="col-lg-6 col-lg-offset-0 col-md-6 col-md-offset-0 col-sm-10 col-sm-offset-0 col-xs-12">
                                     <div class="form-block">
-                                        <form action="#">
+                                        <form action="mail.php" id="contact_form">
                                             <div class="input-block">
                                                    <div>
                                                         <label for="names">Ваше имя:</label><br>
-                                                        <input type="text" name="name" id="names">
+                                                        <input type="text" name="name" id="names" required>
                                                    </div>
                                                    <div>
                                                         <label for="mail">Ваш email:</label><br>
-                                                        <input type="text" name="email" id="mail">
+                                                        <input type="email" name="email" id="mail" required>
                                                    </div>
                                             </div>
                                             <!-- /.input-block -->
                                             <div class="input-block">
                                                     <div>
                                                          <label for="tel">Ваше телефон:</label><br>
-                                                         <input type="text" name="phone" id="tel">
+                                                         <input type="tel" name="phone" id="tel" required pattern="^\+7\d{3}\d{7}$" value="+7" maxlength="12" placeholder="формат +71234567890" title="Введите номер телефона в формате +71234567890">
                                                     </div>
                                                     <div>
                                                          <label for="select">Откуда вы о нас узнали?</label><br>
-                                                         <select id="select">
-                                                             <option value="Инстаграмм аккаунт">Инстаграмм аккаунт</option>
+                                                         <select id="select" name="groups">
+                                                             <option value="Инстаграмм аккаунт" selected>Инстаграмм аккаунт</option>
                                                              <option value="Группа вконтакте">Группа вконтакте</option>
                                                              <option value="От знакомых">От знакомых</option>
                                                              <option value="Другой вариант">Другой вараинт</option>
@@ -358,8 +358,9 @@
                                              </div>
                                              <!-- /.input-block -->
                                              <label for="message">Ваше сообщение:</label><br>
-                                             <textarea type="text" id="message" rows="5"></textarea>
-                                            <button class="content-btn" type="button">Отправить</button>
+                                             <textarea type="text" id="message" rows="5" name="message" required>Введите ваше сообщение...</textarea>
+                                             <button class="contact-btn" type="submit">Отправить</button>
+                                             <span class="before"></span>
                                         </form>
                                     </div>
                             </div>
@@ -406,14 +407,15 @@
                     <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                 <div class="bottom-block left">
-                                    <p>Copyright &copy; 2019. Все права защищены. Веб-дизайнер <a href="https://vk.com/karadzhikov.shura">Aleksandr Karadzikov</a></p> 
+                                    <p>Copyright &copy; 2019. Все права защищены.</p> 
+                                    <p>Веб-дизайнер <a href="https://vk.com/karadzhikov.shura">Aleksandr Karadzikov</a></p>
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="col-lg-6 col-lg-offset-0 col-md-6 col-md-offset-0 col-sm-6 col-xs-12 col-sm-10 col-sm-offset-1 col-xs-12">
                                     <div class="bottom-block right">
                                             <div class="icons-wrap">
                                                 <a class="vk" href="#"><i class="fa fa-vk" aria-hidden="true"></i></a>
-                                                <a class="inst" href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                                <a class="inst" href="https://vk.com/away.php?to=https%3A%2F%2Fwww.instagram.com%2Fp%2FB0gyAHUolqj%2F%3Figshid%3Dhjdp4cnunj42&cc_key=" target="_blank" title="Мы в инстаграмм"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                                                 <a class="twit" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                                             </div>
                                     </div>
@@ -439,24 +441,28 @@
             <button class="close">&times;</button>
             <!-- скролится, контент модального окна -->
             <div class="modal-content">
-                  <form action="#">
+                  <form action="ajax/mail.php" id="modal_form" method="POST">
                       <label for="name">Ваше имя:</label>
-                      <input type="text" name="name" id="name" placeholder="Александра">
+                      <input type="text" name="name" id="name" placeholder="Александра" required>
                       <label for="phone">Ваш телефон:</label>
-                      <input type="text" name="phone" id="phone" placeholder="8988-232-38-93">
-                      <button type="button">Отправить</button>
+                      <input type="tel" name="phone" id="phone" placeholder="8988-232-38-93" required>
+                      <button class="modal-sbm" type="submit">Отправить</button>
+                      <span class="modal_before"></span>
                   </form>
             </div>
         </div>
         <!-- modal ovelray общее затемнее для модального окна -->
         <div class="modal-overlay"></div>
+        
         <div class="preloader">
             <img src="img/loading.gif">
         </div>
+        <!-- /.preloader -->
 
         <div class="go_top">
             <i class="fa fa-arrow-up" aria-hidden="true"></i>
         </div>
+        <!-- /.go_top -->
 
      <!-- Scripts -->
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -464,5 +470,24 @@
      <script src="slick/slick/slick.min.js"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
      <script src="js/main.js"></script>
+     <script src="js/send.js"></script>
+     <script>
+           
+           if (window.localStorage) {
+             let elements = document.querySelectorAll('[name]');
+
+             for (var i = 0, length = elements.length; i < length; i++) {
+                (function(element) {
+                    let name = element.getAttribute('name');
+
+                     element.value = localStorage.getItem(name) || '';
+
+                        element.onkeyup = function() {
+                        localStorage.setItem(name, element.value);
+                        };
+                })(elements[i]);
+        }
+      }
+    </script>
 </body>
 </html>

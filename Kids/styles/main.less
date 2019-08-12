@@ -931,7 +931,7 @@ img{
         position: relative;
         border-radius: 0.4rem;
         padding:1rem;
-        min-height: 25rem;
+        min-height: 27rem;
         margin-bottom: 2rem;
         &::before{
             content: '';
@@ -979,7 +979,7 @@ img{
         padding:1rem;
         border-radius:0.4rem;
         text-align:left;
-        min-height: 25rem;
+        min-height: 27rem;
         &::before{
             content: '';
             position: absolute;
@@ -999,6 +999,8 @@ img{
             margin-bottom: 0.5rem;
         }
         textarea{
+            font-size: 1rem;
+            padding: 0.5rem;
             display:block;
             width:100%;
             border:1px solid silver;
@@ -1006,7 +1008,7 @@ img{
             color:#333;
             .reg();
         }
-        .content-btn{
+        .contact-btn{
             display: inline-block;
             margin-top:1rem;
             border:1px solid @blue-color;
@@ -1018,6 +1020,16 @@ img{
             transition:all 0.3s ease;
             &:hover{
                 background-color:darken(@blue-color,10%);
+            }
+        }
+        .before{
+            display:inline-block;
+            margin-left: 1rem;
+            vertical-align: middle;
+            font-size:1rem;
+            img{
+                width:2.5rem;
+                height: 2.5rem;
             }
         }
         .input-block{
@@ -1033,9 +1045,10 @@ img{
             input{
                 width:100%;
                 border:1px solid silver;
-                padding:0.5rem 0;
+                padding:0.5rem;
                 border-radius:0.4rem;
                 color:#333;
+                font-size: 1rem;
                 .reg();
                 text-align: center;
             }
@@ -1050,6 +1063,43 @@ img{
         }
     }
 }
+// медиа для блока contacts
+@media screen and(max-width:500px){
+    .contacts{
+        .address-block {
+            .address{
+                flex-direction: column;
+                p{
+                    margin-bottom: 0.7rem;
+                    text-align: center;
+                }
+            }
+            .contacts-image{
+                display:none;
+            }
+        }
+    }
+    .form-block{
+        min-height: auto;
+       form{
+        text-align: center;
+        input[for="message"]{
+            margin:auto;
+            text-align: center;
+        }
+       }
+        .input-block{
+           flex-direction: column;
+            div{
+                width: 95%;
+                margin:auto;
+                text-align: center;
+            }
+    }
+
+}
+}
+
 // стили для footer
 footer{
     border-top:5px solid #EADB6C;
@@ -1138,7 +1188,8 @@ footer{
         background-color: @orange-color;
         .left{
             display: flex;
-            align-items: center;
+            flex-direction: column;
+            align-items:flex-start;
             text-align: left;
             color:@bg-color;
             .bold();
@@ -1154,19 +1205,13 @@ footer{
             justify-content: flex-end;
             align-items: center;
             height: 3rem;
-            h3{
-                .bold();
-                color:#000;
-                font-size: 1.2rem;
-                margin:0;
-            }
             a{
-                font-size: 2rem;
+                font-size: 2.2rem;
                 display:inline-block;
                 margin-right: 0.5rem;
                 transition:all 0.3s ease;
                 &:hover{
-                    transform: translateY(-5px) scale(1.1);
+                    transform: translateY(-5px) scale(1.2);
                     
                 }
             }
@@ -1309,6 +1354,7 @@ footer{
                 border-radius:0.5rem;
                 .bold();
                 border:1px solid @blue-color;
+                text-align:center;
             }
             label{
                 .bold();
@@ -1331,6 +1377,16 @@ footer{
                 &:hover{
                     background-color: darken(@blue-color,10%);
                 }
+            }
+            .modal_before{
+                display:inline-block;
+                margin-left: 1rem;
+                vertical-align: middle;
+                font-size:1rem;
+                img{
+                    width:2.5rem;
+                    height: 2.5rem;
+                } 
             }
         }
     }
@@ -1612,6 +1668,7 @@ footer{
                 font-size: 1.5rem;
                 z-index: 10;
                 transition:background 0.3s ease;
+                outline: none;
                 &:hover{
                     background-color: lighten(@red-color,10%);
                 }
@@ -1651,8 +1708,83 @@ footer{
         .bold();
         font-size: 1.5rem;
     }
+    &-sidebar{
+        text-align: left;
+        background-color: @bg-color;
+        padding:0.5rem;
+        border-radius: 0.4rem;
+        box-shadow: -1px 1px 23px 4px rgba(97,97,97,1);
+        width:100%;
+        .sidebar-heading{
+            margin-bottom: 2rem;
+            text-align: center;
+            background-color: @blue-color;
+            padding:0.5rem;
+            border-radius: 0.4rem;
+            color:@bg-color;
+            font-size: 1.5rem;
+            .bold();
+        }
+    }
+    &-nav{
+        display: flex;
+        flex-flow: column;
+        a{
+            .reg();
+            display:block;
+            padding:0.5rem;
+            text-decoration: none;
+            color:#333;
+            border-bottom: 1px solid @blue-color;
+            min-height:3rem;
+            transition:background 0.2s ease;
+            &:hover{
+                background-color: lighten(@blue-color,10%);
+                border-radius: 0.4rem;
+            }
+            span{
+                font-weight:bold;
+            }
+        }
+    }
+    .services-sidebar.fixed{
+        position: fixed;
+        top:7rem;
+        width: auto;
+        
+    }
 }
+// медиа запросы для блока services
+@media screen and (max-width:600px){
+    .services{
+        &-block{
+            padding:0.3rem;
+            .img-block{
+                .arrow{
+                    padding:0.5rem;
+                    font-size: 0.8rem;
+                    &-left{
+                        left: 1.2rem;
+                    }
+                }
+            }
+        }
+        &-content{
+            bottom:1rem;
+            p{
+                font-size: 0.9rem;
+            }
+        }
+        &-heading{
+            font-size: 1.2rem;
+        }
+        &-price{
+            font-size: 1rem;
+        }
+    }
+   
 
+}
 // comments
 .comments{
     text-align: center;

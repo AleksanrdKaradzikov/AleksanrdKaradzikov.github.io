@@ -862,7 +862,7 @@ img {
   position: relative;
   border-radius: 0.4rem;
   padding: 1rem;
-  min-height: 25rem;
+  min-height: 27rem;
   margin-bottom: 2rem;
 }
 .contacts .address-block::before {
@@ -912,7 +912,7 @@ img {
   padding: 1rem;
   border-radius: 0.4rem;
   text-align: left;
-  min-height: 25rem;
+  min-height: 27rem;
 }
 .contacts .form-block::before {
   content: '';
@@ -934,6 +934,8 @@ img {
   margin-bottom: 0.5rem;
 }
 .contacts .form-block textarea {
+  font-size: 1rem;
+  padding: 0.5rem;
   display: block;
   width: 100%;
   border: 1px solid silver;
@@ -942,7 +944,7 @@ img {
   font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 400;
 }
-.contacts .form-block .content-btn {
+.contacts .form-block .contact-btn {
   display: inline-block;
   margin-top: 1rem;
   border: 1px solid #47C2D1;
@@ -954,8 +956,18 @@ img {
   background: #47C2D1;
   transition: all 0.3s ease;
 }
-.contacts .form-block .content-btn:hover {
+.contacts .form-block .contact-btn:hover {
   background-color: #2ea8b7;
+}
+.contacts .form-block .before {
+  display: inline-block;
+  margin-left: 1rem;
+  vertical-align: middle;
+  font-size: 1rem;
+}
+.contacts .form-block .before img {
+  width: 2.5rem;
+  height: 2.5rem;
 }
 .contacts .form-block .input-block {
   display: flex;
@@ -970,9 +982,10 @@ img {
 .contacts .form-block .input-block input {
   width: 100%;
   border: 1px solid silver;
-  padding: 0.5rem 0;
+  padding: 0.5rem;
   border-radius: 0.4rem;
   color: #333;
+  font-size: 1rem;
   font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 400;
   text-align: center;
@@ -985,6 +998,36 @@ img {
   color: #333;
   font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 400;
+}
+@media screen and (max-width: 500px) {
+  .contacts .address-block .address {
+    flex-direction: column;
+  }
+  .contacts .address-block .address p {
+    margin-bottom: 0.7rem;
+    text-align: center;
+  }
+  .contacts .address-block .contacts-image {
+    display: none;
+  }
+  .form-block {
+    min-height: auto;
+  }
+  .form-block form {
+    text-align: center;
+  }
+  .form-block form input[for="message"] {
+    margin: auto;
+    text-align: center;
+  }
+  .form-block .input-block {
+    flex-direction: column;
+  }
+  .form-block .input-block div {
+    width: 95%;
+    margin: auto;
+    text-align: center;
+  }
 }
 footer {
   border-top: 5px solid #EADB6C;
@@ -1077,7 +1120,8 @@ footer .footer-bottom {
 }
 footer .footer-bottom .left {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   text-align: left;
   color: #FDFBEC;
   font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -1095,21 +1139,14 @@ footer .footer-bottom .right {
   align-items: center;
   height: 3rem;
 }
-footer .footer-bottom .right h3 {
-  font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: 700;
-  color: #000;
-  font-size: 1.2rem;
-  margin: 0;
-}
 footer .footer-bottom .right a {
-  font-size: 2rem;
+  font-size: 2.2rem;
   display: inline-block;
   margin-right: 0.5rem;
   transition: all 0.3s ease;
 }
 footer .footer-bottom .right a:hover {
-  transform: translateY(-5px) scale(1.1);
+  transform: translateY(-5px) scale(1.2);
 }
 footer .footer-bottom .right .vk {
   color: #47C2D1;
@@ -1263,6 +1300,7 @@ footer .footer-bottom .right .twit:hover {
   font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 700;
   border: 1px solid #47C2D1;
+  text-align: center;
 }
 .about-modal .modal-content form label {
   font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -1287,6 +1325,16 @@ footer .footer-bottom .right .twit:hover {
 }
 .about-modal .modal-content form button:hover {
   background-color: #2ea8b7;
+}
+.about-modal .modal-content form .modal_before {
+  display: inline-block;
+  margin-left: 1rem;
+  vertical-align: middle;
+  font-size: 1rem;
+}
+.about-modal .modal-content form .modal_before img {
+  width: 2.5rem;
+  height: 2.5rem;
 }
 .about-modal .close {
   position: absolute;
@@ -1518,6 +1566,7 @@ footer .footer-bottom .right .twit:hover {
   font-size: 1.5rem;
   z-index: 10;
   transition: background 0.3s ease;
+  outline: none;
 }
 .services-block .img-block .arrow:hover {
   background-color: #ee8f73;
@@ -1557,6 +1606,76 @@ footer .footer-bottom .right .twit:hover {
   font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 700;
   font-size: 1.5rem;
+}
+.services-sidebar {
+  text-align: left;
+  background-color: #FDFBEC;
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+  box-shadow: -1px 1px 23px 4px #616161;
+  width: 100%;
+}
+.services-sidebar .sidebar-heading {
+  margin-bottom: 2rem;
+  text-align: center;
+  background-color: #47C2D1;
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+  color: #FDFBEC;
+  font-size: 1.5rem;
+  font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+}
+.services-nav {
+  display: flex;
+  flex-flow: column;
+}
+.services-nav a {
+  font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 400;
+  display: block;
+  padding: 0.5rem;
+  text-decoration: none;
+  color: #333;
+  border-bottom: 1px solid #47C2D1;
+  min-height: 3rem;
+  transition: background 0.2s ease;
+}
+.services-nav a:hover {
+  background-color: #70d0db;
+  border-radius: 0.4rem;
+}
+.services-nav a span {
+  font-weight: bold;
+}
+.services .services-sidebar.fixed {
+  position: fixed;
+  top: 7rem;
+  width: auto;
+}
+@media screen and (max-width: 600px) {
+  .services-block {
+    padding: 0.3rem;
+  }
+  .services-block .img-block .arrow {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+  .services-block .img-block .arrow-left {
+    left: 1.2rem;
+  }
+  .services-content {
+    bottom: 1rem;
+  }
+  .services-content p {
+    font-size: 0.9rem;
+  }
+  .services-heading {
+    font-size: 1.2rem;
+  }
+  .services-price {
+    font-size: 1rem;
+  }
 }
 .comments {
   text-align: center;

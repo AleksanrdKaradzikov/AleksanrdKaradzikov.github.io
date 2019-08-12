@@ -11,6 +11,12 @@ $(document).ready(function(){
         $('html, body').animate({scrollTop:$(_href).offset().top + 'px'},1000);
         return false;
     });
+    $('.services-nav a[href^="#"]').on('click',function(event) {
+        event.preventDefault();
+        var _href = $(this).attr('href');
+        $('html, body').animate({scrollTop:$(_href).offset().top + 'px'},1000);
+        return false;
+    });
 });
 
 // slick init
@@ -43,6 +49,7 @@ $(document).ready(function() {
             $('.about-modal, .modal-overlay').fadeIn(600);
     $('.close').on('click', function() {
             $('.about-modal, .modal-overlay').fadeOut(600);
+            $('#modal_form').trigger('reset');
         })
     })
 });
@@ -127,3 +134,5 @@ $(function () {
         }, 1000);
     });
   })
+
+  
