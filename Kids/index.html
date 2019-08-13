@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="детский, сад,минисад,Сочи,клуб,островок,Kids,подготовка,школа, дети">
+    <meta name="description" content="Детский клуб осторов Kids, Детский клуб «Островок» появился в сентябре 2017 года , изначально мы работали в режиме игровой комнаты по адресу ул.Параллельная д.9 ЖК «Остров Мечты», но со временем деток становилось все больше и мы стали искать варианты для расширения . И вот в мае 2019 года мы переехали по новому адресу ул.Параллельная 8/5 и теперь у нас большая площадь с массой развлечений и занятий для деток и собственная площадка для прогулок . Мы всегда рады видеть деток у нас в гостях, приходите знакомиться !">
     <title>Детсий клуб островок</title>
+    <link rel="shortcut icon" href="img/logo.png" type="image/png">
      <!-- click.css -->
      <link rel="stylesheet" href="slick/slick/slick.css" type="text/css">
      <link rel="stylesheet" href="slick/slick/slick-theme.css" type="text/css">
@@ -348,7 +351,7 @@
                                                     </div>
                                                     <div>
                                                          <label for="select">Откуда вы о нас узнали?</label><br>
-                                                         <select id="select" name="groups">
+                                                         <select id="select" name="groups" required>
                                                              <option value="Инстаграмм аккаунт" selected>Инстаграмм аккаунт</option>
                                                              <option value="Группа вконтакте">Группа вконтакте</option>
                                                              <option value="От знакомых">От знакомых</option>
@@ -441,11 +444,11 @@
             <button class="close">&times;</button>
             <!-- скролится, контент модального окна -->
             <div class="modal-content">
-                  <form action="ajax/mail.php" id="modal_form" method="POST">
+                  <form action="ajax/send-modal.php" id="modal_form" method="POST">
                       <label for="name">Ваше имя:</label>
                       <input type="text" name="name" id="name" placeholder="Александра" required>
                       <label for="phone">Ваш телефон:</label>
-                      <input type="tel" name="phone" id="phone" placeholder="8988-232-38-93" required>
+                      <input type="tel" name="phone" id="phone" required pattern="^\+7\d{3}\d{7}$" value="+7" maxlength="12" placeholder="формат +71234567890" title="Введите номер телефона в формате +71234567890">
                       <button class="modal-sbm" type="submit">Отправить</button>
                       <span class="modal_before"></span>
                   </form>

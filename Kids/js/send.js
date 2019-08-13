@@ -10,8 +10,8 @@ $(document).ready(function() {
         event.preventDefault();
         let data = $(this).serialize();
         $.ajax({
-            url:'ajax/mail.php',
-            type:'GET',
+            url:'ajax/send.php',
+            type:'post',
             cache:false,
             data:data,
             dataType:'html',
@@ -21,7 +21,6 @@ $(document).ready(function() {
                 $('.before').html(mailInfo.beforeSend);
             },
             success: function(data){
-                    console.log(data);
                    if(data) {
                     $('.before').html(mailInfo.success);
                     $('.before').css('color', 'green');
@@ -51,8 +50,8 @@ $(document).ready(function() {
         event.preventDefault();
         let data = $(this).serialize();
         $.ajax({
-            url:'ajax/mail.php',
-            type:'GET',
+            url:'ajax/send-modal.php',
+            type:'post',
             cache:false,
             data:data,
             dataType:'html',
@@ -62,7 +61,6 @@ $(document).ready(function() {
                 $('.modal_before').html(mailInfo.beforeSend);
             },
             success: function(data){
-                    console.log(data);
                    if(data) {
                     $('.modal_before').html(mailInfo.success);
                     $('.modal_before').css('color', 'green');
