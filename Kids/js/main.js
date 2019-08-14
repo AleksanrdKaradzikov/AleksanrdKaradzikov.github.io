@@ -39,6 +39,12 @@ $(document).ready(function(){
         prevArrow:'<button type="button" class="arrow arrow-left">&lsaquo;</button>'
     });
 
+    $('.children-slider').slick({
+        autoplay: true,
+        nextArrow:'<button type="button" class="arrow arrow-right">&rsaquo;</button>',
+        prevArrow:'<button type="button" class="arrow arrow-left">&lsaquo;</button>'
+    });
+
 });
 
 // модальные окна

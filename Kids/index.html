@@ -16,8 +16,8 @@
     <link rel="stylesheet" href="styles/bootstrap.css" type="text/css">
     <!-- fontawesome.css -->
     <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css" type="text/css">
-    <!-- fotoram.css -->
-    <link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+    <!-- animate.css -->
+    <link  href="./styles/Animate.css" rel="stylesheet">
     <!--main.css-->
     <link rel="stylesheet" href="styles/main.css" type="text/css">
 </head>
@@ -60,9 +60,10 @@
      </header>
      <!-- /.header -->
      <div id="content">
-                <main class="main parallax-window" data-parallax="scroll" data-image-src="img/main-bg.jpg" id="home">
+                <main class="main parallax-window"  id="home"   data-parallax="scroll" data-image-src="./img/main-bg.jpg">
+                
                     <div class="container">
-                        <div class="main-slider">
+                        <div class="main-slider wow fadeIn" data-wow-delay="1s">
                             <h1 class="main-heading">
                                 Дети довольны, Мамы спокойны!
                              </h1>
@@ -83,7 +84,7 @@
                 <div class="container">
                     <div class="row">
                             <div class="col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
-                                    <div class="about-card">
+                                    <div class="about-card wow fadeInLeft" data-wow-delay="0.2s">
                                         <div class="img-block">
                                             <a href="services.html#mini-garden"><img src="img/about1.jpg" alt=""></a>
                                         </div>
@@ -92,7 +93,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
-                                    <div class="about-card">
+                                    <div class="about-card wow fadeIn" data-wow-delay="0.2s">
                                         <div class="img-block">
                                             <a href="services.html#game-room"><img src="img/about2.jpg" alt=""></a>
                                         </div>
@@ -101,7 +102,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
-                                    <div class="about-card">
+                                    <div class="about-card wow fadeInRight" data-wow-delay="0.2s">
                                         <div class="img-block">
                                             <a href="services.html#school"><img src="img/about3.jpg" alt=""></a>
                                         </div>
@@ -120,7 +121,7 @@
                                         </div>
                                         <div class="row">
                                                         <div class="col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
-                                                            <div class="content-block content-red">
+                                                            <div class="content-block content-red wow fadeIn" data-wow-delay="0.2s">
                                                                 <h2>О нас</h2>
                                                                 <img src="img/about-content.jpg" alt="Кто мы такие?">
                                                                 <p>Детский клуб «Островок» появился в сентябре 2017 года , изначально мы работали в режиме игровой комнаты по адресу ул.Параллельная д.9 
@@ -129,19 +130,19 @@
                                                             <button class="content-btn red-btn" type="button">Узнать подробнее</button>
                                                         </div>
                                                         <div class="col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
-                                                            <div class="content-block content-orange">
+                                                            <div class="content-block content-orange wow fadeIn" data-wow-delay="0.3s">
                                                                 <h2>Почему родители выбирают нас</h2>
                                                                 <ul>
-                                                                    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, maiores porro? Eligendi excepturi libero tempore officiis, doloribus sint sed ex.</li>
-                                                                    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, maiores porro? Eligendi excepturi libero tempore officiis, doloribus sint sed ex.</li>
-                                                                    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, maiores porro? Eligendi excepturi libero tempore officiis, doloribus sint sed ex.</li>
-                                                                    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, maiores porro? Eligendi excepturi libero tempore officiis, doloribus sint sed ex.</li>
+                                                                    <li><span>У нас уникальная команда </span></li>
+                                                                    <li><span>У нас уютно как дома</span></li>
+                                                                    <li><span>У нас индивидуальное отношение и подход к каждому ребенку</span></li>
+                                                                    <li><span>Нас рекомендуют мамы</span></li>
                                                                 </ul>
                                                             </div>
                                                             <button class="content-btn orange-btn" type="button">Узнать подробнее</button>
                                                         </div>
                                                         <div class="col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
-                                                            <div class="content-block content-blue">
+                                                            <div class="content-block content-blue wow fadeIn" data-wow-delay="0.4s">
                                                                 <h2>Популярные программы</h2>
                                                                 <ul>
                                                                     <li>Мисад <span class="price"> от 16000 руб/месяц</span></li>
@@ -168,18 +169,19 @@
             <section class="children">
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-7">
-                               <div class="children-slider fotorama" data-width="100%"   data-autoplay="true" data-stopautoplayontouch="talse">
-                                <img src="img/childs.jpg" alt="Игровая комната">
-                                <img src="img/childs.jpg" alt="Игровая комната">
-                                <img src="img/childs.jpg" alt="Игровая комната">
+                            <div class="col-lg-6 col-lg-offset-0 col-md-6 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-12">
+                               <div class="children-slider wow fadeIn">
+                                <img src="/files/game-room/game1.jpg" alt="Игровая комната">
+                                <img src="./files/game-room/game2.jpg" alt="Игровая комната">
+                                <img src="./files/game-room/game3.jpg" alt="Игровая комната">
+                                <img src="./files/game-room/game4.jpg" alt="Игровая комната">
                                </div>
                             </div>
-                            <div class="col-lg-5">
-                                 <div class="children-block">
+                            <div class="col-lg-6 col-lg-offset-0 col-md-6 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-12">
+                                 <div class="children-block  wow fadeIn">
                                      <h1 class="children-heading">Мы позаботимся о ваших детях</h1>
                                      <p class="polz">Игровая комната</p>
-                                    <p>Вы можете оставить своих деток в нашей игровой комнате, мы позаботимся о них на время вашего отсутствия</p>
+                                    <p>Вы можете оставить своих деток в нашей игровой комнате, мы позаботимся о них на время вашего отсутствия, дети будут под присмотром опытных воспитателей,  а также поиграют и позанимаются творчеством.</p>
                                      <a class="children-btn" href="services.html#game-room">Подробнее</a>
                                  </div>
                         </div>
@@ -191,25 +193,25 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1">
-                            <div class="advantages-card">
+                            <div class="advantages-card wow jackInTheBox">
                                 <i class="fa fa-diamond" aria-hidden="true"></i>
                                 <h2>Профессиональные воспитатели</h2>
                             </div>
                         </div>
                         <div class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1">
-                            <div class="advantages-card">
+                            <div class="advantages-card wow jackInTheBox" data-wow-delay="0.1s">
                                 <i class="fa fa-heart" aria-hidden="true"></i>
                                 <h2>Особый подход к каждому ребёнку</h2>
                             </div>
                         </div>
                         <div class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1">
-                            <div class="advantages-card">
+                            <div class="advantages-card wow jackInTheBox" data-wow-delay="0.2s">
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <h2>Унивирсальная образовательная программа</h2>
                             </div>
                         </div>
                         <div class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1">
-                            <div class="advantages-card">
+                            <div class="advantages-card wow jackInTheBox" data-wow-delay="0.3s">
                                     <i class="fa fa-futbol-o" aria-hidden="true"></i>
                                     <h2>Игровая комната,где можно оставить ребенка под присмотром</h2>
                             </div>
@@ -248,7 +250,7 @@
                  <div class="container">
                      <div class="row">
                          <div class="col-lg-4 col-md-4">
-                              <div class="lessons-block">
+                              <div class="lessons-block wow bonceInLeft">
                                     <ul class="right-list">
                                             <li>ENGLISH LESSON</li>
                                             <li>KARATE</li>
@@ -259,7 +261,7 @@
                               </div>      
                          </div>
                          <div class="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4">
-                            <div class="lessons-block">
+                            <div class="lessons-block wow bonceInRight" data-wow-delay="0.2s">
                                     <ul class="left-list">
                                             <li>READING</li>
                                             <li>MATH & GAME</li>
@@ -269,7 +271,7 @@
                                     </ul>
                             </div>  
                          </div>
-                         <img class="books" src="img/books.jpg" alt="Книги">
+                         <img class="books wow fadeIn" data-wow-delay="0.1s" src="img/books.jpg" alt="Книги">
                      </div>
                  </div>
             </section>
@@ -277,35 +279,34 @@
                 <h1 class="teachers-heading">
                     Наши воспитатели
                 </h1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto blanditiis voluptates earum sunt! Similique, eaque facilis. Tempore cumque dolorum sed.</p>
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1">
-                            <div class="teachers-block">
-                                <img src="img/teachers/teacher1.jpg" alt="Наши воспитатели">
-                                <div class="name">Samantha Smith</div>
-                                <div class="subject"> Music & Art</div>
+                            <div class="teachers-block wow flipInX">
+                                <img src="./files/Teachers/teacher1.jpg" alt="Наши воспитатели">
+                                <div class="name">Малахова Наталья Александровная</div>
+                                <div class="subject">Руководитель детского клуба</div>
                             </div>
                         </div>
                         <div class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1">
-                            <div class="teachers-block">
-                                <img src="img/teachers/teacher2.jpg" alt="Наши воспитатели">
-                                <div class="name">George Campbal</div>
-                                <div class="subject">Karate & Sport</div>
+                            <div class="teachers-block  wow flipInX" data-wow-delay="0.01s">
+                                <img src="./files/Teachers/teacher2.jpg" alt="Наши воспитатели">
+                                <div class="name">Неупокоева Оксана Владимировна</div>
+                                <div class="subject">Воспитатель-педагог</div>
                             </div>
                         </div>
                         <div class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1">
-                            <div class="teachers-block">
-                                <img src="img/teachers/teacher3.jpg" alt="Наши воспитатели">
-                                <div class="name">Katerine John</div>
-                                <div class="subject">Literature</div>
+                            <div class="teachers-block wow flipInX" data-wow-delay="0.02s">
+                                <img src="./files/Teachers/teacher3.jpg" alt="Наши воспитатели">
+                                <div class="name">Шутеева Анна Александровна</div>
+                                <div class="subject">Педагог-психолог</div>
                             </div>
                         </div>
                         <div class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1">
-                            <div class="teachers-block">
-                                <img src="img/teachers/teacher4.jpg" alt="Наши воспитатели">
-                                <div class="name">Laura Loran</div>
-                                <div class="subject">Math & Reading</div>
+                            <div class="teachers-block  wow flipInX" data-wow-delay="0.03s">
+                                <img src="./files/Teachers/teacher4.jpg" alt="Наши воспитатели">
+                                <div class="name">Терещенко Татьяна Викторовна</div>
+                                <div class="subject">Логопед-дефектолог</div>
                             </div>
                         </div>
                     </div>
@@ -471,11 +472,13 @@
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
      <script src="js/parallax.js-1.5.0/parallax.js-1.5.0/parallax.min.js"></script>
      <script src="slick/slick/slick.min.js"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+     <script src="./js/wow.js"></script>
      <script src="js/main.js"></script>
      <script src="js/send.js"></script>
      <script>
-           
+
+            new WOW().init();
+
            if (window.localStorage) {
              let elements = document.querySelectorAll('[name]');
 
