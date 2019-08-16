@@ -36,7 +36,8 @@ $(document).ready(function(){
     
     $('.services-block .img-block').slick({
         nextArrow:'<button type="button" class="arrow arrow-right">&rsaquo;</button>',
-        prevArrow:'<button type="button" class="arrow arrow-left">&lsaquo;</button>'
+        prevArrow:'<button type="button" class="arrow arrow-left">&lsaquo;</button>',
+        adaptiveHeight: true
     });
 
     $('.children-slider').slick({

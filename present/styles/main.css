@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  overflow-x: hidden;
+}
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  z-index: 1;
+  overflow: hidden;
+}
+.background__layer {
+  position: absolute;
+  width: 110%;
+  top: -10%;
+  left: -10%;
+  height: 110%;
+}
+.background .layer_1 {
+  background: url("../img/bg.png") center no-repeat;
+  background-size: cover;
+}
+.background .layer_2 {
+  background: url("../img/love.png") center no-repeat;
+}
+.content {
+  position: relative;
+  top: 100vh;
+  z-index: 10;
+  min-height: 500px;
+  width: 100%;
+  margin: auto;
+  border-radius: 10px;
+  background: rgba(250, 250, 250, 0.4);
+}
+.content__block {
+  height: 100vh;
+  background-size: cover;
+  background-position: center 30%;
+  background-repeat: no-repeat;
+}
+.content__block_1 {
+  background-image: url(../img/content1.jpg);
+}
+.content__block_2 {
+  background-image: url(../img/content2.jpg);
+}
+.content__block_3 {
+  background-image: url(../img/content3.jpg);
+  background-position: center 5%;
+}
+.content__block_4 {
+  background-image: url(../img/content4.jpg);
+  background-position: center 80%;
+}
+.content__block_5 {
+  background-image: url(../img/content5.jpg);
+}

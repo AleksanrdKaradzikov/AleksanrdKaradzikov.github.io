@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Two years ago</title>
+    <link rel="stylesheet" type="text/css" href="./styles/main.css">
+</head>
+<body>
+      <div class="background">
+        <div class="background__layer layer_1" data-speed="10"></div>
+        <div class="background__layer layer_2" data-speed="40"></div>
+        <div class="background__layer layer_3" data-speed="80"></div>
+        <div class="background__layer layer_4" data-speed="90"></div>
+      </div>
+      <main class="content">
+            <div class="content__block content__block_1" data-paralax-speed="0.7"></div>
+            <div class="content__block content__block_2" data-paralax-speed="0.7"></div>
+            <div class="content__block content__block_3" data-paralax-speed="0.7"></div>
+            <div class="content__block content__block_4" data-paralax-speed="0.7"></div>
+            <div class="content__block content__block_5" data-paralax-speed="0.7"></div>
+      </main>
+
+
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="./js/main.js"></script>
+      <script src="./js/MyParallaxLibrarys.js"></script>
+      <script>
+      paralaxA.init('.content__block');
+      </script>
+</body>
+</html>
