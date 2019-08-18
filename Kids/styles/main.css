@@ -398,7 +398,8 @@ img {
   margin-bottom: 2rem;
   font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 700;
-  color: #000;
+  color: #E86A46;
+  font-size: 1.2rem;
 }
 .about-content .content-block {
   padding: 0.5rem 1rem;
@@ -800,6 +801,8 @@ img {
   font-weight: 400;
   width: 80%;
   margin: 1rem auto 6rem auto;
+  color: #E86A46;
+  font-size: 1.2rem;
 }
 .lessons-block {
   margin-top: 3rem;
@@ -808,6 +811,7 @@ img {
   list-style-type: none;
 }
 .lessons-block ul li {
+  text-transform: uppercase;
   font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 700;
   color: #F2A34D;
@@ -827,6 +831,17 @@ img {
   width: 18rem;
   height: 38rem;
   transform: translate(-50%, -7%);
+}
+@media (max-width: 599px) {
+  .lessons-heading {
+    font-size: 1.5rem;
+  }
+  .lessons p {
+    font-size: 1rem;
+  }
+  .lessons-block ul li {
+    font-size: 1rem;
+  }
 }
 .teachers {
   text-align: center;
@@ -849,11 +864,18 @@ img {
   margin-bottom: 2rem;
   text-align: center;
   cursor: pointer;
+  overflow: hidden;
+  font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #FDFBEC;
+  margin: 1rem 0 0.5rem 0;
 }
 .teachers-block:hover img {
   border-color: #E86A46;
 }
 .teachers-block img {
+  margin-bottom: 1rem;
   width: 15rem;
   height: 15rem;
   border: 10px solid #FDFBEC;
@@ -863,22 +885,24 @@ img {
   border-bottom-left-radius: 2.5rem;
   border-bottom-right-radius: 0.5rem;
 }
-.teachers-block .name {
+.teachers .subject {
   font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 700;
-  font-size: 1.2rem;
   color: #FDFBEC;
-  margin: 1rem 0 0.5rem 0;
+  font-size: 1rem;
 }
-.teachers-block .subject {
-  font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: 700;
-  color: #FDFBEC;
+@media (max-width: 400px) {
+  .teachers-heading {
+    font-size: 1.5rem;
+  }
+  .teachers-block {
+    font-size: 1rem;
+  }
 }
 .contacts {
   position: relative;
   text-align: center;
-  padding: 2rem;
+  padding: 3rem;
   min-height: 20rem;
   z-index: 10;
   color: #FDFBEC;
@@ -929,6 +953,7 @@ img {
   display: flex;
   justify-content: space-between;
   margin-bottom: 2rem;
+  font-size: 1.2rem;
 }
 .contacts .address-block .address p {
   text-align: left;
@@ -948,10 +973,13 @@ img {
   font-weight: 700;
 }
 .contacts .address-block .contacts-image {
-  height: 18rem;
+  height: 20rem;
   border-radius: 0.4rem;
-  padding: 1rem;
+  padding: 0.5rem;
   background-color: #FDFBEC;
+}
+.contacts .address-block .contacts-image img {
+  border-radius: 0.4rem;
 }
 .contacts .form-block {
   position: relative;
@@ -979,6 +1007,7 @@ img {
   font-weight: 700;
   display: inline-block;
   margin-bottom: 0.5rem;
+  font-size: 1.2rem;
 }
 .contacts .form-block textarea {
   font-size: 1rem;
@@ -1034,7 +1063,7 @@ img {
   padding: 0.5rem;
   border-radius: 0.4rem;
   color: #333;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 400;
   text-align: center;
@@ -1049,8 +1078,13 @@ img {
   font-weight: 400;
 }
 @media screen and (max-width: 500px) {
+  .contacts-heading {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
   .contacts .address-block .address {
     flex-direction: column;
+    font-size: 0.8rem;
   }
   .contacts .address-block .address p {
     margin-bottom: 0.7rem;
@@ -1059,20 +1093,23 @@ img {
   .contacts .address-block .contacts-image {
     display: none;
   }
-  .form-block {
+  .contacts .form-block {
     min-height: auto;
   }
-  .form-block form {
+  .contacts .form-block form {
     text-align: center;
   }
-  .form-block form input[for="message"] {
+  .contacts .form-block form input[for="message"] {
     margin: auto;
     text-align: center;
   }
-  .form-block .input-block {
+  .contacts .form-block form label {
+    font-size: 1rem;
+  }
+  .contacts .form-block .input-block {
     flex-direction: column;
   }
-  .form-block .input-block div {
+  .contacts .form-block .input-block div {
     width: 95%;
     margin: auto;
     text-align: center;
