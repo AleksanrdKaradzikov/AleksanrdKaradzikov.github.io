@@ -37,11 +37,11 @@ $(document).ready(function(){
     $('.services-block .img-block').slick({
         nextArrow:'<button type="button" class="arrow arrow-right">&rsaquo;</button>',
         prevArrow:'<button type="button" class="arrow arrow-left">&lsaquo;</button>',
-        adaptiveHeight: true
     });
 
     $('.children-slider').slick({
         autoplay: true,
+        dots: true,
         nextArrow:'<button type="button" class="arrow arrow-right">&rsaquo;</button>',
         prevArrow:'<button type="button" class="arrow arrow-left">&lsaquo;</button>'
     });
@@ -99,9 +99,46 @@ $(document).ready(function() {
          $('.photo').show(700);
          $('#all').attr('disabled', 'disabled');
     })
+
+    // $('.dropdownlink').on('click', function() {
+    //     let $this = $(this);
+    //     let next = $this.next();
+    //     next.slideToggle(400);
+    //     $this.toggleClass('open');
+    //     $('.dropdownlink').not($this).removeClass('open');
+    // })
 });
 
+$(function() {
+    var Accordion = function(el, multiple) {
+      this.el = el || {};
+      // more then one submenu open?
+      this.multiple = multiple || false;
+      
+      var dropdownlink = this.el.find('.dropdownlink');
+      dropdownlink.on('click',
+                      { el: this.el, multiple: this.multiple },
+                      this.dropdown);
+    };
+    
+    Accordion.prototype.dropdown = function(e) {
+      var $el = e.data.el,
+          $this = $(this),
+          //this is the ul.submenuItems
+          $next = $this.next();
+      
+      $next.slideToggle();
+      $this.toggleClass('open');
+      
+      if(!e.data.multiple) {
+        //show only one menu at the same time
+        $el.find('.dropdown').not($next).slideUp().prev().removeClass('open');
 
+      }
+    }
+    
+    var accordion = new Accordion($('.services-price'), false);
+  })
 
 
 // fotorama-modal
