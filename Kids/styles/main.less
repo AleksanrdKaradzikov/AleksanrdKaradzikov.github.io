@@ -453,7 +453,7 @@ img{
        }
         .content-block{
             padding:0.5rem 1rem;
-            min-height: 40rem;
+            min-height: 48rem;
             margin-bottom:2rem;
             background-color:@bg-color;
             border-radius:0.4rem;
@@ -479,7 +479,8 @@ img{
                 margin: 1rem 0;
                 border:5px solid #E5E3BE;
                 border-radius: 0.5rem;
-                height: 12rem;
+                height: auto;
+                max-height: 350px;
             }
         }
         .content-orange{
@@ -668,7 +669,7 @@ img{
         img{
             height: auto;
             border-radius: 0.6rem;
-            
+            max-height: 450px;
         }
         .arrow{
             position: absolute;
@@ -1782,6 +1783,8 @@ footer{
             border:5px solid @bg-color;
             img{
                 border-radius: 0.4rem;
+                height: auto;
+                max-height: 620px;
             }
             .arrow{
                 position: absolute;
@@ -1847,7 +1850,7 @@ footer{
         &:hover {
         background-color:darken(@blue-color, 10%);
         .fa-undo{
-            transform: rotate(-180deg);
+            transform: rotate(-360deg);
         }
         }
         i{
@@ -1971,6 +1974,9 @@ footer{
                     font-size:0.9rem;
                     td{
                         padding: 5px 30px 5px 5px;
+                        display:flex;
+                        flex-direction: column;
+                        text-align: center;
                     }
                 }
             }

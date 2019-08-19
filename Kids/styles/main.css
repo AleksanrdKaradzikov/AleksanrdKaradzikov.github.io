@@ -403,7 +403,7 @@ img {
 }
 .about-content .content-block {
   padding: 0.5rem 1rem;
-  min-height: 40rem;
+  min-height: 48rem;
   margin-bottom: 2rem;
   background-color: #FDFBEC;
   border-radius: 0.4rem;
@@ -432,7 +432,8 @@ img {
   margin: 1rem 0;
   border: 5px solid #E5E3BE;
   border-radius: 0.5rem;
-  height: 12rem;
+  height: auto;
+  max-height: 350px;
 }
 .about-content .content-orange {
   border-top: 5px solid #F2A34D;
@@ -597,6 +598,7 @@ img {
 .children-slider img {
   height: auto;
   border-radius: 0.6rem;
+  max-height: 450px;
 }
 .children-slider .arrow {
   position: absolute;
@@ -1662,6 +1664,8 @@ footer .footer-bottom .right .twit:hover {
 }
 .services-block .img-block img {
   border-radius: 0.4rem;
+  height: auto;
+  max-height: 620px;
 }
 .services-block .img-block .arrow {
   position: absolute;
@@ -1730,7 +1734,7 @@ footer .footer-bottom .right .twit:hover {
   background-color: #2ea8b7;
 }
 .services-price .dropdownlink:hover .fa-undo {
-  transform: rotate(-180deg);
+  transform: rotate(-360deg);
 }
 .services-price .dropdownlink i {
   transition: transform 0.3s ease;
@@ -1846,6 +1850,9 @@ footer .footer-bottom .right .twit:hover {
   }
   .services-price .dropdown table td {
     padding: 5px 30px 5px 5px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
   }
 }
 .comments {
