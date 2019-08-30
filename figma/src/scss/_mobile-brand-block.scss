@@ -1,0 +1,86 @@
+.mobile-brand-block{
+    display:none;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 2rem;
+    margin-bottom:3rem;
+    &__logo{
+        position: relative;
+        width:6rem;
+        height: 4rem;
+        margin-right: 2rem;
+        opacity: 1;
+        display: block;
+        transition: opacity 0.5s ease,
+                    width 0.5s ease,
+                    height 0.5s ease;
+        img{
+            max-width:100%;
+            height:100%;
+        }
+    }
+    .close-block{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width:4rem;
+        height: 4rem;
+        background-color: $iconsColor;
+        border-radius: 50%;
+        cursor: pointer;
+        margin-right:1rem; 
+    }
+    .mobile-search-block{
+        display: flex;
+        align-items: center;
+        position: relative;
+        &__img{
+            position: relative;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            width:4rem;
+            height: 4rem;
+            background-color: $iconsColor;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    }
+    .mobile-search-block__input-search{
+        position: relative;
+        transform-origin: left center;
+        transform: translateX(12%);
+        height: 0;
+        width:0;
+        border: 1px solid #EAEAEA;
+        border-radius: 20px;
+        outline:none;
+        transition: width 0.5s ease,
+                    opacity 0.5s ease,
+                    height 0.5s ease,
+                    padding 0.5s ease;
+        opacity: 0;
+        color:$iconsColor;
+        font-weight: bold;
+    }
+    .active-input{
+        padding-right:3rem;
+        padding-left:2rem; 
+        width:100%;
+        height:4rem;
+        opacity: 1;
+    }
+}
+
+.hidden{
+    width: 0;
+    height: 0;
+    opacity: 0;
+    margin:0;
+}
+
+@media screen and(max-width:991px){
+    .mobile-brand-block{
+        display:  flex;
+    }
+}

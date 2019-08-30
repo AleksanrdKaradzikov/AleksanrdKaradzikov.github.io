@@ -1,0 +1,74 @@
+.feedback-modal{
+    position: absolute;
+    top:0;
+    right: -200%;
+    height: 0;
+    width:44rem;
+    padding: 2rem;
+    background-color: $sideBarColor;
+    box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2), -2px 0px 4px rgba(69, 79, 126, 0.02);
+    opacity: 0;
+    transition: right 0.5s ease,
+                opacity 0.5s ease;
+    &-icon-block{
+        position: relative;
+        left:-8rem;
+        top: -4rem;
+        @media screen and(max-width:520px){
+            left:0;
+            top:-12rem;
+        }
+    }
+    &__heading{
+        @media screen and(max-width:520px){
+            margin-top:10rem;
+        }
+    }
+    &__form{
+        display: flex;
+        flex-direction: column;
+    }
+    .modal-form__input{
+        padding:1.5rem;
+        font-size:1.6rem;
+        color:$modalInputColor;
+        margin-bottom: 1.5rem;
+        border:1px solid $lineColor;
+        border-radius: 0.8rem;
+        outline: none;
+    }
+    .modal-form__textarea{
+        padding:1.5rem;
+        font-size:1.6rem;
+        color:$modalInputColor;
+        margin-bottom: 1.5rem;
+        border:1px solid $lineColor;
+        border-radius: 0.8rem;
+        height: 118px;
+        outline: none;
+    }
+    .modal-form__text{
+        font-size: 1.4rem;
+        color:$activeTextColor;
+        &--red-text{
+            color:$iconsColor;
+        }
+    }
+    &__btn{
+        align-self: flex-end;
+
+    }
+}
+
+.feedback-modal--active{
+    opacity: 1;
+    transition: right 0.5s ease,
+                opacity 0.5s ease;
+    right:0;
+    height: 100%;
+}
+@media screen and(max-width:520px){
+    .feedback-modal{
+        width:100%;
+    }
+}

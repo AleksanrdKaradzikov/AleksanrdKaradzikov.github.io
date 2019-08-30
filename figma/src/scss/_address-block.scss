@@ -1,0 +1,29 @@
+.address-block{
+    margin-top:8rem;
+}
+.address-block__link-block{
+    text-align: right;
+    margin-bottom: 2rem;
+}
+.address-link{
+    display:inline-block;
+    text-decoration:none;
+    color: $textColor;
+    font-family: $fontBold;
+    padding-right: 2rem;
+    font-size:1.6rem;
+    background: url("/img/icons/red-dropdown.png") right center no-repeat;
+}
+.address-block__information{
+    display: flex;
+    margin-top:2rem;
+    @media screen and (max-width: 767px){
+        flex-direction: column;
+    }
+    .discription-block__text{
+        font-size: 1.4rem;
+        margin-bottom: 2rem;
+        width: 95%;
+        text-align: left;
+    }
+}
