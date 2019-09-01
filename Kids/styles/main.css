@@ -358,7 +358,8 @@ img {
   font-weight: 700;
 }
 .about-card .img-block {
-  width: 65%;
+  width: 75%;
+  height: 15rem;
   margin: 0 auto;
   border-radius: 50%;
   overflow: hidden;
@@ -367,7 +368,7 @@ img {
 }
 .about-card .img-block img {
   border-radius: 50%;
-  transition: all 0.5s ease;
+  transition: transform 0.5s ease;
   padding: 0.6rem;
   background-color: #47c2d1;
 }
@@ -375,7 +376,7 @@ img {
   box-shadow: 2px 2px 50px #E86A46;
 }
 .about-card .img-block:hover img {
-  transform: scale(1.2);
+  transform: scale(1.2) rotate(-10deg);
   transition: all 0.5s ease;
 }
 .about-content {
@@ -1182,9 +1183,19 @@ footer .footer-top .orange-block {
   color: #FDFBEC;
   background-color: #F2A34D;
   font-size: 1.8rem;
+  transition: background-color 0.3s ease;
+}
+footer .footer-top .orange-block:hover {
+  background-color: #f4af65;
 }
 footer .footer-top .orange-block p {
   margin: 0;
+}
+footer .footer-top .orange-block p a {
+  text-decoration: none;
+  color: #FDFBEC;
+  display: inline-flex;
+  align-items: center;
 }
 footer .footer-top .orange-block i {
   display: inline-block;

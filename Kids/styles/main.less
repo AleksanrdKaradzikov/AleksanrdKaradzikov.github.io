@@ -405,7 +405,8 @@ img{
             .bold();
         }
         .img-block{
-            width: 65%;
+            width: 75%;
+            height:15rem;
             margin: 0 auto;
             border-radius: 50%;
             overflow: hidden;
@@ -413,14 +414,14 @@ img{
             cursor: pointer;
             img{
                 border-radius:50%;
-                transition: all 0.5s ease;
+                transition: transform 0.5s ease;
                 padding:0.6rem;
                 background-color: @blue-color;
             }
             &:hover{
                 box-shadow:2px 2px 50px @red-color;
                 img{
-                    transform: scale(1.2);
+                    transform: scale(1.2) rotate(-10deg);
                     transition: all 0.5s ease;
                 }
             }
@@ -1266,8 +1267,18 @@ footer{
             color:@bg-color;
             background-color: @orange-color;
             font-size: 1.8rem;
+            transition: background-color 0.3s ease;
+            &:hover{
+                background-color: lighten(@orange-color, 5%);
+            }
             p{
                 margin:0;
+                a{
+                    text-decoration:none;
+                    color:@bg-color;
+                    display:inline-flex;
+                    align-items: center;
+                }
             }
             i{
                 display:inline-block;
